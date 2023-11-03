@@ -3,10 +3,41 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FruitBazzar1.Views.CartPage"
              Title="Cart">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+        <ScrollView>
+            <VerticalStackLayout>
+                <Grid ColumnDefinitions="*, Auto,*"
+                      RowDefinitions="160, Auto">
+
+                    <BoxView BackgroundColor="Orange"
+                             Grid.ColumnSpan="3"
+                             HeightRequest="160"
+                             HorizontalOptions="FillAndExpand"/>
+
+                    <Frame Grid.RowSpan="2"
+                           Grid.Column="1"
+                           HeightRequest="160"
+                           WidthRequest="160"
+                           CornerRadius="80"
+                           HorizontalOptions="Center"
+                           IsClippedToBounds="True"
+                           Padding="0"
+                           Margin="0,80,0,0">
+
+                    <Image Aspect="AspectFill"
+                               HeightRequest="160"
+                               WidthRequest="160"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               Source="orange.jpg"/>
+
+                    </Frame>
+                </Grid>
+
+            
+                    
+            
+
+            </VerticalStackLayout>
+        </ScrollView>
+
 </ContentPage>
