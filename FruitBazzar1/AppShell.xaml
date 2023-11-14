@@ -8,7 +8,7 @@
     xmlns:views="clr-namespace:FruitBazzar1.Views"
     xmlns:viewmodel="clr-namespace:FruitBazzar1.ViewModel"
     Shell.FlyoutBehavior="Disabled"
-    Shell.BackgroundColor="White"
+    Shell.BackgroundColor="Black"
     Shell.TabBarTitleColor="#6AD4A3">
 
     <!--<ShellContent
@@ -24,8 +24,7 @@
         </Tab>
         <Tab Title="Product"
              Icon="{FontImage FontFamily=FAS, Glyph={x:Static helper:FontAwesomeHelper.Box}}">
-            <ShellContent 
-                         ContentTemplate="{DataTemplate views:ProductPage}"
+            <ShellContent ContentTemplate="{DataTemplate views:ProductPage}"
                           Route="ProductPage" />
         </Tab>
 

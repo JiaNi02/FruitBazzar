@@ -6,7 +6,7 @@ namespace FruitBazzar1.Model
     public class Order
     {
         public long Id { get; set; }
-        public IEnumerable<CartItem> Items { get; set; } = Enumerable.Empty<CartItem>();
+        public IEnumerable<Cart> Items { get; set; } = Enumerable.Empty<Cart>();
 
         public DateTime Date { get; set; } = DateTime.Now;
         public decimal TotalAmount => Items.Sum(i => i.Amount);

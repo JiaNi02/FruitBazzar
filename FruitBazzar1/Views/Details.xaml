@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:FruitBazzar1.Model"
+             x:Class="FruitBazzar1.Views.Details"
+             Title="Details">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Frame BackgroundColor="#ffffff">
+                <VerticalStackLayout>
+                    <Image Aspect="AspectFill"
+               HeightRequest="180"
+               WidthRequest="230"
+               HorizontalOptions="Center"
+               Source="Resources/Images/orange.jpg"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Label Margin="10"
+               Text="Orange"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="Start"
+               FontSize="Title"/>
+            <Label Margin="10"
+               Text="Available in stock"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="Start"
+               FontSize="Body"/>
+            <Label Margin="10"
+               Text="Description"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="Start"
+               FontSize="Title"/>
+            <Label Margin="10"
+               Text="Oranges are renowned for their refreshing, zesty flavor. These vibrant fruits burst with sweet juiciness and are packed with vitamin C, making them a healthy and delicious choice. Whether enjoyed fresh or as a zesty addition to culinary creations, oranges are a cheerful and nutritious treat."
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="Start"
+               FontSize="Body"/>
+
+            <Label Margin="10"
+               Text="Related Item"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="Start"
+               FontSize="Title"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Image Source="Resources/Images/apple.jpg" Aspect="AspectFill" HeightRequest="100" WidthRequest="100" />
+                <StackLayout>
+                    <Label Text="Related Item 1" FontAttributes="Bold" />
+                    <Label Text="Description for Related Item 1" />
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Second Related Item -->
+            <StackLayout Orientation="Horizontal">
+                <Image Source="Resources/Images/kiwi.jpg" Aspect="AspectFill" HeightRequest="100" WidthRequest="100" />
+                <StackLayout>
+                    <Label Text="Related Item 2" FontAttributes="Bold" />
+                    <Label Text="Description for Related Item 2" />
+                </StackLayout>
+            </StackLayout>
+
+            <Button Text="Add to cart"
+                    Clicked="OnAddtoCartButtonClicked"
+                    VerticalOptions="End"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="10"/>
+
+            <Label x:Name="resultLabel"
+                Text=""
+                IsVisible="False"
+                FontSize="18"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"/>
+            
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>

@@ -1,43 +1,61 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:FruitBazzar1.Model"
              x:Class="FruitBazzar1.Views.CartPage"
              Title="Cart">
-        <ScrollView>
-            <VerticalStackLayout>
-                <Grid ColumnDefinitions="*, Auto,*"
-                      RowDefinitions="160, Auto">
 
-                    <BoxView BackgroundColor="Orange"
-                             Grid.ColumnSpan="3"
-                             HeightRequest="160"
-                             HorizontalOptions="FillAndExpand"/>
+    <ScrollView>
+        <StackLayout Padding="10">
 
-                    <Frame Grid.RowSpan="2"
-                           Grid.Column="1"
-                           HeightRequest="160"
-                           WidthRequest="160"
-                           CornerRadius="80"
-                           HorizontalOptions="Center"
-                           IsClippedToBounds="True"
-                           Padding="0"
-                           Margin="0,80,0,0">
+            <!-- Shopping Cart Frame -->
+            <Frame BorderColor="#3498DB" CornerRadius="10" HasShadow="True">
+                <StackLayout>
+                    <!-- Product List -->
+                    <ListView ItemsSource="{Binding SelectedProducts}" SeparatorVisibility="None">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" Padding="10">
+                                        <Label Text="{Binding ProductName}" FontSize="Medium" />
+                                        <Label Text="{Binding Quantity}" FontSize="Medium" />
+                                        <Label Text="{Binding Price, StringFormat='{0:C}'}" FontSize="Medium" />
+                                        <Label Text="{Binding Subtotal, StringFormat='{0:C}'}" FontSize="Medium" />
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
 
-                    <Image Aspect="AspectFill"
-                               HeightRequest="160"
-                               WidthRequest="160"
-                               HorizontalOptions="Center"
-                               VerticalOptions="Center"
-                               Source="orange.jpg"/>
+                    <!-- Total Price -->
+                    <StackLayout HorizontalOptions="End" Padding="10">
+                        <Label Text="Total Price:" FontSize="Large" />
+                        <Label Text="{Binding TotalPrice, StringFormat='{0:C}'}" FontSize="Large" />
+                    </StackLayout>
 
-                    </Frame>
-                </Grid>
+                    <!-- Payment Button -->
+                    <Button Text="Proceed to Payment" Clicked="OnPaymentButtonClicked" 
+                            HorizontalOptions="Center"
+                            VerticalOptions="EndAndExpand"
+                            Margin="10"/>
 
-            
-                    
-            
+                </StackLayout>
+
+            </Frame>
+
+            <VerticalStackLayout HorizontalOptions="Fill"
+                                 VerticalOptions="EndAndExpand">
+
+                <Button Text="Show details"
+                        Clicked="OnDetailsClicked"
+                        VerticalOptions="End"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="5"/>
 
             </VerticalStackLayout>
-        </ScrollView>
+
+        </StackLayout>
+
+    </ScrollView>
 
 </ContentPage>
