@@ -1,11 +1,14 @@
 using FruitBazzar1.ViewModel;
 namespace FruitBazzar1.Views;
 
+
 public partial class HomePage : ContentPage
 {
-	public HomePage()
+	private readonly HomeViewModel _homeViewModel;
+	public HomePage(HomeViewModel homeViewModel)
 	{
 		InitializeComponent();
-        BindingContext = new HomeViewModel();
+        _homeViewModel= homeViewModel;
+		BindingContext = _homeViewModel;
     }
 }
