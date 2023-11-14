@@ -40,6 +40,7 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
+		<MauiImage Include="Resource\Images\*.DS_Store" />
 		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
 
 		<!-- Custom Fonts -->
@@ -53,13 +54,22 @@
 	  <None Remove="Resources\Fonts\Brands-Regular-400.otf" />
 	  <None Remove="Resources\Fonts\Free-Regular-400.otf" />
 	  <None Remove="Resources\Fonts\Free-Solid-900.otf" />
-	  <None Remove="Resources\Images\apple.jpg" />
-	  <None Remove="Resources\Images\credit.jpg" />
-	  <None Remove="Resources\Images\kiwi.jpeg" />
-	  <None Remove="Resources\Images\orange.jpg" />
+	  <None Remove="Resources\Images\apple.png" />
+	  <None Remove="Resources\Images\banana.png" />
+	  <None Remove="Resources\Images\durian.png" />
+	  <None Remove="Resources\Images\fruithome.jpg" />
+	  <None Remove="Resources\Images\grapefruitgreen.png" />
+	  <None Remove="Resources\Images\grapefuit.png" />
+	  <None Remove="Resources\Images\langsat.png" />
+	  <None Remove="Resources\Images\logo.png" />
+	  <None Remove="Resources\Images\orange.png" />
+	  <None Remove="Resources\Images\papaya.png" />
+	  <None Remove="Resources\Images\rambutan.png" />
+	  <None Remove="Resources\Images\watermelon.png" />
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Maui" Version="6.1.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
@@ -74,10 +84,13 @@
 	  <MauiXaml Update="Views\CartPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\CategoryDetail.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\ChatPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Details.xaml">
+	  <MauiXaml Update="Views\DetailsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\HomePage.xaml">
