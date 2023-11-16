@@ -4,21 +4,6 @@
              x:Class="FruitBazzar1.Views.ChatPage"
              Title="ChatPage">
 
-    <ScrollView>
-        <StackLayout>
-            <!--Chat ListView-->
-            <ListView x:Name="chatListView" ItemTemplate="{StaticResource ChatMessageTemplate}">
-                <ListView.Header>
-                    <BoxView HeightRequest="10"/>
-                </ListView.Header>
-            </ListView>
 
-            <!--User Input Entry-->
-            <Entry x:Name="userInputEntry"
-                   Placeholder="Type your message..."
-                   Completed="OnSendMessageCompleted"/>
-
-        </StackLayout>
-    </ScrollView>
 
 </ContentPage>

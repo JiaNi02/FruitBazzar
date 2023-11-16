@@ -12,14 +12,15 @@
     Shell.BackgroundColor="Black"
     Shell.TabBarTitleColor="#6AD4A3">
 
+
     <Shell.Behaviors>
         <toolkit:StatusBarBehavior StatusBarColor="#6AD4A3"
                                    StatusBarStyle="DarkContent"/>
     </Shell.Behaviors>
     <ShellContent
-       Title="Main Page"
+       Title=""
        ContentTemplate="{DataTemplate local:MainPage}"
-       Route="//MainPage" />
+       Route="MainPage" />
 
     <TabBar>
         <Tab Title="Home"
@@ -27,10 +28,10 @@
             <ShellContent ContentTemplate="{DataTemplate views:HomePage}"
                           Route="HomePage" />
         </Tab>
-        <Tab Title="Product"
+        <Tab Title="Category"
              Icon="{FontImage FontFamily=FAS, Glyph={x:Static helper:FontAwesomeHelper.Box}}">
-            <ShellContent ContentTemplate="{DataTemplate views:ProductPage}"
-                          Route="ProductPage" />
+            <ShellContent ContentTemplate="{DataTemplate views:CategoryDetail}"
+                          Route="CategoryDetail" />
         </Tab>
 
         <Tab Title="Chat"

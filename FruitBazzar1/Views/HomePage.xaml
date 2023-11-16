@@ -129,11 +129,12 @@
                                         VerticalOptions="End"
                                         HorizontalOptions="Center"
                                         Padding="22,0"
-                                        Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewmodel:ProductViewModel}},
-                                                    Path=GoToDetailsPageCommand}"/>
+                                        Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewmodel:HomeViewModel}},
+                                                    Path=GoToDetailsPageCommand}"
+                                                     CommandParameter="{Binding .}"/>
                             </Grid>
                             <Border.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewmodel:ProductViewModel}},
+                                <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewmodel:HomeViewModel}},
                                                     Path=GoToDetailsPageCommand}"
                                                      CommandParameter="{Binding .}"/>
                             </Border.GestureRecognizers>

@@ -54,14 +54,19 @@
 	  <None Remove="Resources\Fonts\Brands-Regular-400.otf" />
 	  <None Remove="Resources\Fonts\Free-Regular-400.otf" />
 	  <None Remove="Resources\Fonts\Free-Solid-900.otf" />
+	  <None Remove="Resources\Images\add.png" />
 	  <None Remove="Resources\Images\apple.png" />
+	  <None Remove="Resources\Images\back.png" />
 	  <None Remove="Resources\Images\banana.png" />
+	  <None Remove="Resources\Images\check.png" />
+	  <None Remove="Resources\Images\delete.png" />
 	  <None Remove="Resources\Images\durian.png" />
 	  <None Remove="Resources\Images\fruithome.jpg" />
 	  <None Remove="Resources\Images\grapefruitgreen.png" />
 	  <None Remove="Resources\Images\grapefuit.png" />
 	  <None Remove="Resources\Images\langsat.png" />
 	  <None Remove="Resources\Images\logo.png" />
+	  <None Remove="Resources\Images\minus.png" />
 	  <None Remove="Resources\Images\orange.png" />
 	  <None Remove="Resources\Images\papaya.png" />
 	  <None Remove="Resources\Images\rambutan.png" />
@@ -88,6 +93,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ChatPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\CheckoutPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\DetailsPage.xaml">
