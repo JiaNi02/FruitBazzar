@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:helpers="clr-namespace:FruitBazzar1.Helper"
+             x:Class="FruitBazzar1.Views.RegisterPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#D3EEE0"
+             Title="RegisterPage">
+    <VerticalStackLayout
+        Spacing="15"
+        Padding="30,0"
+        VerticalOptions="Center">
+
+        <Image Source="logo.png"  HeightRequest="300" WidthRequest="300" HorizontalOptions="Center"/>
+
+        <Grid RowSpacing="5" Grid.Row="1" Margin="20,20,20,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="1" Text="Register Here" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold" Padding="0" Margin="0"/>
+            
+
+            <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                <Frame BackgroundColor="Transparent" BorderColor="#1D8348" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" Margin="5" >
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BackgroundColor="Black" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0">
+                            <Image Source="profile.jpg" Aspect="AspectFill"/>
+                        </Frame>
+                        <Entry Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Fullname" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="Transparent" BorderColor="#1D8348" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" Margin="5" >
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0">
+                            <Image Source="profile.jpg" Aspect="AspectFill"/>
+                        </Frame>
+                        <Entry Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Email" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="Transparent" BorderColor="#1D8348" Padding="0" Margin="5,5,0,0" HorizontalOptions="FillAndExpand" CornerRadius="30"  >
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BackgroundColor="SkyBlue" HeightRequest="20" WidthRequest="35" CornerRadius="30" Padding="0">
+                            <Image Source="lockicon.png" Aspect="AspectFill"/>
+                        </Frame>
+                        <Entry Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Password" IsPassword="True" FontAttributes="Bold" TextColor="White"/>
+                    </StackLayout>
+                </Frame>
+                <StackLayout Orientation="Horizontal" Margin="0,30,0,0" Padding="0">
+                    
+                </StackLayout>
+
+
+                <!--<Button x:Name="BtnLogin" Text="Sign in" TextColor="#18282F" 
+                WidthRequest="100" 
+                CornerRadius="20"
+                HorizontalOptions="Center" 
+                BackgroundColor="White"
+                Clicked="BtnLogin_Clicked"/>-->
+                <Border StrokeShape="RoundRectangle 25"
+                    StrokeThickness="0"
+                    BackgroundColor="#1D8348"
+                    HeightRequest="50"
+                    WidthRequest="250">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                    </Border.GestureRecognizers>
+                    <HorizontalStackLayout HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       Spacing="10">
+                        <Label Text="Login"
+                           VerticalOptions="Center"
+                           FontSize="18"/>
+                        <Image Source="{x:Static helpers:FontAwesomeHelper.MagnifyingGlassArrowRight}"
+                           VerticalOptions="Center"
+                           HeightRequest="30"/>
+                    </HorizontalStackLayout>
+
+                </Border>
+
+
+            </StackLayout>
+        </Grid>
+
+    </VerticalStackLayout>
+</ContentPage>

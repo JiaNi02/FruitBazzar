@@ -78,13 +78,19 @@ namespace FruitBazzar1.ViewModel
 
         }
 
+
         private async void GoBack(object obj)
         {
             await Application.Current.MainPage.Navigation.PopModalAsync();
         }
         private async void SelectProduct(ProductListModel obj)
         {
-            await Application.Current.MainPage.Navigation.PushModalAsync(new DetailsPage());
+            await Application.Current.MainPage.Navigation.PushModalAsync(DetailsPage());
+
+            static DetailsPage DetailsPage()
+            {
+                return new DetailsPage();
+            }
         }
 
     }

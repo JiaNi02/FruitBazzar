@@ -35,11 +35,16 @@ public static class MauiProgram
 		AddProductServices(IServiceCollection services)
 	{
 		services.AddSingleton<ProductService>();
-		services.AddScopedWithShellRoute<HomePage,
-			HomeViewModel>(nameof(HomePage));
-		services.AddTransientWithShellRoute<ProductPage,ProductViewModel>(nameof(ProductPage));
-        services.AddTransientWithShellRoute<DetailsPage, DetailsViewModel>(nameof(DetailsPage));
 
+		services.AddSingleton<HomePage>()
+				.AddSingleton<HomeViewModel>();
+
+		services.AddTransientWithShellRoute<ProductPage,ProductViewModel>(nameof(ProductPage));
+        
+		services.AddTransientWithShellRoute<DetailsPage, DetailsViewModel>(nameof(DetailsPage));
+        
+		services.AddSingleton<CartViewModel>();
+		services.AddTransient<CartPage>();
 
         return services;
 	}

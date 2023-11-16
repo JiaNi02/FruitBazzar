@@ -89,7 +89,7 @@
                                             <Border.GestureRecognizers>
                                                 <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewmodel:ProductViewModel}},
                                                     Path=GoToDetailsPageCommand}"
-                                                     CommandParameter="{Binding .}"/>
+                                                    CommandParameter="{Binding .}"/>
                                             </Border.GestureRecognizers>
                                         </Border>
                                     </VerticalStackLayout>
