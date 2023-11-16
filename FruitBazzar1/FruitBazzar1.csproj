@@ -50,6 +50,29 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <AndroidResource Remove="Resources\Images - Copy\**" />
+	  <Compile Remove="Resources\Images - Copy\**" />
+	  <EmbeddedResource Remove="Resources\Images - Copy\**" />
+	  <MauiCss Remove="Resources\Images - Copy\**" />
+	  <MauiXaml Remove="Resources\Images - Copy\**" />
+	  <None Remove="Resources\Images - Copy\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Model\Class1.cs" />
+	  <Compile Remove="Views\NewPage1.xaml.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Remove="Resources\Images\profile img.jpg" />
+	  <MauiImage Remove="Resources\Images\profile.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Remove="Views\NewPage1.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <None Remove="Resources\Fonts\Brands-Regular-400.otf" />
 	  <None Remove="Resources\Fonts\Free-Regular-400.otf" />
 	  <None Remove="Resources\Fonts\Free-Solid-900.otf" />
@@ -62,7 +85,10 @@
 	  <None Remove="Resources\Images\langsat.png" />
 	  <None Remove="Resources\Images\logo.png" />
 	  <None Remove="Resources\Images\orange.png" />
+	  <None Remove="Resources\Images\p1.jpg" />
 	  <None Remove="Resources\Images\papaya.png" />
+	  <None Remove="Resources\Images\profile img.jpg" />
+	  <None Remove="Resources\Images\profile.jpg" />
 	  <None Remove="Resources\Images\rambutan.png" />
 	  <None Remove="Resources\Images\watermelon.png" />
 	</ItemGroup>
@@ -90,6 +116,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\DetailsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\EditPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\HomePage.xaml">

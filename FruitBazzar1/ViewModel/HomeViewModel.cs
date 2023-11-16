@@ -42,7 +42,13 @@ namespace FruitBazzar1.ViewModel
                 [nameof(DetailsViewModel.Product)] = product
             };
             await Shell.Current.GoToAsync(nameof(DetailsPage), animate: true, parameters);
-        }   
+        }
+
+        [RelayCommand]
+        public async Task OnGoToClicked(bool fromSearch = false)
+        {
+            await Shell.Current.GoToAsync(nameof(ProductPage));
+        }
     }
 
 }
