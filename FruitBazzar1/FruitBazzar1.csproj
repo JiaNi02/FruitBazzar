@@ -34,6 +34,10 @@
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+		<MauiSplashScreen Include="Resources\Images\splash.svg">
+		  <Color>#512BD4</Color>
+		  <BaseSize>128,128</BaseSize>
+		</MauiSplashScreen>
 
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
@@ -51,6 +55,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Remove="Resources\Images\splash.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <None Remove="Resources\Fonts\Brands-Regular-400.otf" />
 	  <None Remove="Resources\Fonts\Free-Regular-400.otf" />
 	  <None Remove="Resources\Fonts\Free-Solid-900.otf" />
@@ -65,11 +73,15 @@
 	  <None Remove="Resources\Images\grapefruitgreen.png" />
 	  <None Remove="Resources\Images\grapefuit.png" />
 	  <None Remove="Resources\Images\langsat.png" />
+	  <None Remove="Resources\Images\lockicon.png" />
+	  <None Remove="Resources\Images\login.png" />
 	  <None Remove="Resources\Images\logo.png" />
 	  <None Remove="Resources\Images\minus.png" />
 	  <None Remove="Resources\Images\orange.png" />
 	  <None Remove="Resources\Images\papaya.png" />
+	  <None Remove="Resources\Images\profile.jpg" />
 	  <None Remove="Resources\Images\rambutan.png" />
+	  <None Remove="Resources\Images\splash.svg" />
 	  <None Remove="Resources\Images\watermelon.png" />
 	</ItemGroup>
 
@@ -77,6 +89,7 @@
 		<PackageReference Include="CommunityToolkit.Maui" Version="6.1.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Toolkit.Mvvm" Version="7.1.2" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -104,13 +117,16 @@
 	  <MauiXaml Update="Views\HomePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\ProductPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ProfilePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Purchase.xaml">
+	  <MauiXaml Update="Views\RegisterPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
