@@ -28,6 +28,7 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+		<LangVersion>preview</LangVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -61,8 +62,12 @@
 	  <None Remove="Resources\Fonts\Brands-Regular-400.otf" />
 	  <None Remove="Resources\Fonts\Free-Regular-400.otf" />
 	  <None Remove="Resources\Fonts\Free-Solid-900.otf" />
+	  <None Remove="Resources\Images\add.png" />
 	  <None Remove="Resources\Images\apple.png" />
+	  <None Remove="Resources\Images\back.png" />
 	  <None Remove="Resources\Images\banana.png" />
+	  <None Remove="Resources\Images\check.png" />
+	  <None Remove="Resources\Images\delete.png" />
 	  <None Remove="Resources\Images\durian.png" />
 	  <None Remove="Resources\Images\fruithome.jpg" />
 	  <None Remove="Resources\Images\grapefruitgreen.png" />
@@ -71,16 +76,21 @@
 	  <None Remove="Resources\Images\lockicon.png" />
 	  <None Remove="Resources\Images\login.png" />
 	  <None Remove="Resources\Images\logo.png" />
+	  <None Remove="Resources\Images\minus.png" />
 	  <None Remove="Resources\Images\orange.png" />
+	  <None Remove="Resources\Images\p1.jpg" />
 	  <None Remove="Resources\Images\papaya.png" />
+	  <None Remove="Resources\Images\people.png" />
 	  <None Remove="Resources\Images\profile.jpg" />
 	  <None Remove="Resources\Images\rambutan.png" />
+	  <None Remove="Resources\Images\rightarrow.png" />
 	  <None Remove="Resources\Images\splash.svg" />
+	  <None Remove="Resources\Images\star.png" />
 	  <None Remove="Resources\Images\watermelon.png" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CommunityToolkit.Maui" Version="6.1.0" />
+		<PackageReference Include="CommunityToolkit.Maui" Version="6.0.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="Microsoft.Toolkit.Mvvm" Version="7.1.2" />
@@ -102,7 +112,13 @@
 	  <MauiXaml Update="Views\ChatPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\CheckoutPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\DetailsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\EditProfilePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\HomePage.xaml">

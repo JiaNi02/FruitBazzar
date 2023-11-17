@@ -9,6 +9,7 @@
              x:Class="FruitBazzar1.Views.ProductPage"
              x:DataType="viewmodel:ProductViewModel"
              Title="All Items">
+    
     <ContentPage.Triggers>
         <DataTrigger TargetType="ContentPage"
                      Binding="{Binding FromSearch}"
@@ -55,7 +56,7 @@
                                                FontSize="20"/>
                                         <Grid ColumnDefinitions="*,*">
                                             <Label Grid.Column="0"
-                                                   Text="{Binding Price, StringFormat=$'{0:N2}'}"
+                                                   Text="{Binding Price, StringFormat=RM'{0:N2}'}"
                                                    FontAttributes="Bold"/>
                                             <HorizontalStackLayout Grid.Column="1"
                                                           HorizontalOptions="End"
@@ -89,7 +90,7 @@
                                             <Border.GestureRecognizers>
                                                 <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewmodel:ProductViewModel}},
                                                     Path=GoToDetailsPageCommand}"
-                                                     CommandParameter="{Binding .}"/>
+                                                    CommandParameter="{Binding .}"/>
                                             </Border.GestureRecognizers>
                                         </Border>
                                     </VerticalStackLayout>
