@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FruitBazzar1.Model
 {
-    public partial class MenuItems
+    public partial class MenuItem
     {
         public int Id { get; set; }
         public string Title { get; set; }

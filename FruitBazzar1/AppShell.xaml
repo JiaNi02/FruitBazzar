@@ -9,7 +9,6 @@
     xmlns:views="clr-namespace:FruitBazzar1.Views"
     xmlns:viewmodel="clr-namespace:FruitBazzar1.ViewModel"
     Shell.FlyoutBehavior="Disabled"
-    Shell.TitleView="Center"
     Shell.BackgroundColor="Black"
     Shell.TabBarTitleColor="#6AD4A3">
 
