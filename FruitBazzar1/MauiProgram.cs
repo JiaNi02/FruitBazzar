@@ -39,6 +39,7 @@ public static class MauiProgram
 			HomeViewModel>(nameof(HomePage));
 		services.AddTransientWithShellRoute<ProductPage,ProductViewModel>(nameof(ProductPage));
         services.AddTransientWithShellRoute<DetailsPage, DetailsViewModel>(nameof(DetailsPage));
+        services.AddTransientWithShellRoute<ProfilePage, ProfileViewModel>(nameof(ProfilePage));
 
 
         return services;

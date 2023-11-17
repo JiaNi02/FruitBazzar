@@ -73,9 +73,12 @@
 	  <None Remove="Resources\Images\logo.png" />
 	  <None Remove="Resources\Images\orange.png" />
 	  <None Remove="Resources\Images\papaya.png" />
+	  <None Remove="Resources\Images\people.png" />
 	  <None Remove="Resources\Images\profile.jpg" />
 	  <None Remove="Resources\Images\rambutan.png" />
+	  <None Remove="Resources\Images\rightarrow.png" />
 	  <None Remove="Resources\Images\splash.svg" />
+	  <None Remove="Resources\Images\star.png" />
 	  <None Remove="Resources\Images\watermelon.png" />
 	</ItemGroup>
 
@@ -103,6 +106,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\DetailsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\EditProfilePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\HomePage.xaml">

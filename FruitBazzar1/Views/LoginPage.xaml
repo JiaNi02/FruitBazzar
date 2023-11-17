@@ -4,7 +4,7 @@
              xmlns:helpers="clr-namespace:FruitBazzar1.Helper"
              x:Class="FruitBazzar1.Views.LoginPage"
               Shell.NavBarIsVisible="False"
-             BackgroundColor="#6AD4A3"
+             BackgroundColor="#D3EEE0"
              Title="LoginPage" >
     <VerticalStackLayout
         Spacing="15"
