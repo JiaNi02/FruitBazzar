@@ -6,5 +6,5 @@ global using FruitBazzar1.ViewModel;
 global using System;
 global using System.Collections.ObjectModel;
 global using  CommunityToolkit.Mvvm.Input;
-
-
+global using CommunityToolkit.Maui.Alerts;
+global using CommunityToolkit.Maui.Core;

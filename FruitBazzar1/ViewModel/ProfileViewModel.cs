@@ -1,8 +1,13 @@
-﻿using System;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FruitBazzar1.Model;
+using FruitBazzar1.Services;
+using FruitBazzar1.Views;
 using System.Windows.Input;
 using Microsoft.Maui.Controls;
 using FruitBazzar1.Views;

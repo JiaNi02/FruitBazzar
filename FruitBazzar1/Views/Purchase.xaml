@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:model="clr-namespace:FruitBazzar1.Model"
+             x:Class="FruitBazzar1.Views.Purchase"
+             Title="Purchase">
+
+    <ScrollView>
+        <StackLayout Padding="20">
+            <!-- Payment Information -->
+            <Label Text="Payment Information" FontSize="Large" />
+
+            <Frame Padding="10" Margin="10">
+                <!-- Payment Method Dropdown -->
+                <Picker x:Name="paymentMethodPicker" Title="Select Payment Method">
+                    <Picker.Items>
+                        <x:String>Credit Card</x:String>
+                        <x:String>PayPal</x:String>
+                        <x:String>Bank Transfer</x:String>
+                        <!-- Add more payment methods as needed -->
+                    </Picker.Items>
+                </Picker>
+            </Frame>
+
+            <Frame Padding="10" Margin="10">
+                <StackLayout x:Name="paymentDetailsLayout">
+                    <!-- Credit Card Details -->
+                    <Entry Placeholder="Cardholder's Name" />
+                    <Entry Placeholder="Credit Card Number" Keyboard="Numeric" />
+                    <StackLayout Orientation="Horizontal">
+                        <Entry Placeholder="Expiry Date (MM/YY)" Keyboard="Numeric" />
+                        <Entry Placeholder="CVV" Keyboard="Numeric" />
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <Frame Padding="10" Margin="10">
+                <StackLayout>
+                    <Entry Placeholder="Address" />
+                    <Entry Placeholder="Country" />
+                    <Entry Placeholder="Poscode" />
+                    <Entry Placeholder="City" />
+                </StackLayout>
+            </Frame>
+
+            <Frame Padding="10" Margin="10">
+                <StackLayout>
+                    <Entry Placeholder="Address" />
+                    <Entry Placeholder="Country" />
+                    <Entry Placeholder="Poscode" />
+                    <Entry Placeholder="City" />
+                </StackLayout>
+            </Frame>
+
+            
+                <!-- Payment Button -->
+                <Button Text="Complete Payment" Clicked="OnCompletePaymentClicked"
+                        Margin="10"
+                        HorizontalOptions="Center"
+                        VerticalOptions="EndAndExpand"/>
+
+            <!-- Payment Status -->
+            <Label x:Name="paymentStatusLabel" Text="" FontSize="Large" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

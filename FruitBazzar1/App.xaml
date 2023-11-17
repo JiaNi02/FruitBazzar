@@ -9,6 +9,15 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate x:Key="ChatMessageTemplate">
+                <ViewCell>
+                    <StackLayout Padding="10" HorizontalOptions="{Binding IsIncoming, Converter={StaticResource MessageAlignmentConverter}}">
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+
         </ResourceDictionary>
     </Application.Resources>
+
 </Application>
