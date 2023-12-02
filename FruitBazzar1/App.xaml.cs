@@ -6,24 +6,27 @@ namespace FruitBazzar1;
 
 public partial class App : Application
 {
-	public App()
-	{
-		InitializeComponent();
+    public App(AppShell appShell)
+    {
+        InitializeComponent();
 
-		MainPage = new AppShell();
-	}
-}
+        MainPage = appShell;
+    }
 
-public class MessageAlignmentConverter: IValueConverter
-{
-	public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-	{
-		bool isIncoming = (bool)value;
-		return isIncoming ? LayoutOptions.Start : LayoutOptions.End;
-	}
 
-	public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-	{
-		throw new NotImplementedException();
-	}
+    public class MessageAlignmentConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            bool isIncoming = (bool)value;
+            return isIncoming ? LayoutOptions.Start : LayoutOptions.End;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+
 }

@@ -4,45 +4,40 @@
              xmlns:helpers="clr-namespace:FruitBazzar1.Helper"
              x:Class="FruitBazzar1.MainPage"
              Shell.NavBarIsVisible="False"
-             BackgroundColor="#6AD4A3">
+             BackgroundColor="#fED480">
 
-    <Grid RowDefinitions="Auto,*,Auto"
-          Padding="20,95">
-        <Label Grid.Row="0"/>
-        <Image Grid.Row="1"
-               Source="logo.png"
-               HeightRequest="300"
-               WidthRequest="300"
-               VerticalOptions="Center"
-               HorizontalOptions="Center"/>
+    <Grid RowDefinitions="Auto,*,Auto" Padding="20,95">
+        <Image Grid.Row="0"
+           Source="logo.png"
+           HeightRequest="300"
+           WidthRequest="300"
+           VerticalOptions="Center"
+           HorizontalOptions="Center"/>
 
-        <VerticalStackLayout Grid.Row="2"
-                             Spacing="5">
-            <!--<Label Text="Let's on find &#10;The best Friuts"
-                   FontSize="30"
-                   TextColor="White"
-                   FontAttributes="Bold"
-                   HorizontalOptions="Center"
-                   Padding="25"/>-->
+        <StackLayout Grid.Row="1" Margin="0,20,0,0">
+            <Label Text="Fresh Fruit at Your Fingertips" FontSize="32" FontAttributes="Bold" 
+                   FontFamily="Lobster-Regular"
+                   HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+            <Label Text="Start your fruity journey with us and enjoy a healthier, tastier life!"
+                   FontSize="19"
+                   HorizontalTextAlignment="Center" 
+                   VerticalOptions="Center" 
+                   HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
+
+        <VerticalStackLayout Grid.Row="2" Spacing="20" VerticalOptions="Center">
             <Border StrokeShape="RoundRectangle 25"
-                    StrokeThickness="0"
-                    BackgroundColor="White"
-                    HeightRequest="50"
-                    WidthRequest="300">
+                StrokeThickness="0"
+                BackgroundColor="Black"
+                HeightRequest="50"
+                WidthRequest="300">
                 <Border.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                 </Border.GestureRecognizers>
-                <HorizontalStackLayout HorizontalOptions="Center"
-                                       VerticalOptions="Center"
-                                       Spacing="10">
-                    <Label Text="Get Started"
-                           VerticalOptions="Center"
-                           FontSize="18"/>
-                    <Image Source="{x:Static helpers:FontAwesomeHelper.MagnifyingGlassArrowRight}"
-                           VerticalOptions="Center"
-                           HeightRequest="30"/>
+                <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
+                    <Label Text="Get Started" VerticalOptions="Center" FontSize="20" TextColor="White"/>
+                    <Image Source="{x:Static helpers:FontAwesomeHelper.MagnifyingGlassArrowRight}" VerticalOptions="Center" HeightRequest="30"/>
                 </HorizontalStackLayout>
-
             </Border>
         </VerticalStackLayout>
     </Grid>

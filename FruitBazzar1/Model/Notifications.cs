@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace FruitBazzar1.Model
 {
-    public class MenuItems
+    public class Notifications
     {
-        public int Id { get; set; }
         public string Title { get; set; }
-        public string IconPath { get; set; }
-        public Type TargetType { get; set; }
+        public string Content { get; set; }
+        public string ImagePath { get; set; }
+        public DateTime? NotificationDateTime { get; set; } 
     }
 }

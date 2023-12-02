@@ -39,12 +39,12 @@ namespace FruitBazzar1.ViewModel
         void PopulateData()
         {
             MenuItems.Clear();
-            MenuItems.Add(new Model.MenuItems() { Title = "Edit Profile", IconPath = "profile.png", TargetType = typeof(EditProfilePage) });
-            MenuItems.Add(new Model.MenuItems() { Title = "Shipping Address", IconPath = "profile.png", TargetType = typeof(HomePage) });
-            MenuItems.Add(new Model.MenuItems() { Title = "Order History", IconPath = "profile.png", TargetType = typeof(HomePage) });
+            MenuItems.Add(new Model.MenuItems() { Title = "Edit Profile", Body = "profile.png", TargetType = typeof(EditProfilePage) });
+            MenuItems.Add(new Model.MenuItems() { Title = "Shipping Address", Body = "profile.png", TargetType = typeof(HomePage) });
+            MenuItems.Add(new Model.MenuItems() { Title = "Order History", Body = "profile.png", TargetType = typeof(HomePage) });
             //MenuItems.Add(new Model.MenuItems() { Title = "Track Order", Body = "\uf787", TargetType = typeof(OrderDetails) });
-            MenuItems.Add(new Model.MenuItems() { Title = "Cards", IconPath = "profile.png", TargetType = typeof(HomePage) });
-            MenuItems.Add(new Model.MenuItems() { Title = "Notifications", IconPath = "profile.png", TargetType = typeof(HomePage) });
+            MenuItems.Add(new Model.MenuItems() { Title = "Cards", Body = "profile.png", TargetType = typeof(HomePage) });
+            MenuItems.Add(new Model.MenuItems() { Title = "Notifications", Body = "profile.png", TargetType = typeof(HomePage) });
         }
 
         private void CommandInit()

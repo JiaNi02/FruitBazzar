@@ -6,13 +6,13 @@ namespace FruitBazzar1.Views;
 public partial class LoginPage : ContentPage
 {
 
-        public LoginViewModel ViewModel { get; } = new LoginViewModel();
+    public LoginViewModel ViewModel { get; } = new LoginViewModel();
 
-        public LoginPage()
-        {
-            InitializeComponent();
-            BindingContext = ViewModel;
-        }
+    public LoginPage()
+    {
+        InitializeComponent();
+        BindingContext = ViewModel;
+    }
 
     private async void SignUpLabel_Tapped(object sender, EventArgs e)
     {
@@ -21,11 +21,13 @@ public partial class LoginPage : ContentPage
     async void TapGestureRecognizer_Tapped(System.Object sender, Microsoft.Maui.Controls.
     TappedEventArgs e)
     {
-        await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
+        await Shell.Current.GoToAsync(nameof(HomePage), animate: true);
     }
-    //private void BtnLogin_Clicked(object sender, EventArgs e)
+    //public LoginPage(LoginPageViewModel viewModel)
     //{
-    //     Navigation.PushAsync(new HomePage());
+    //    InitializeComponent();
+
+    //    this.BindingContext = viewModel;
     //}
 
 
