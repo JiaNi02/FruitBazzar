@@ -6,7 +6,7 @@
              Shell.NavBarIsVisible="False"
              BackgroundColor="#fED480">
 
-    <Grid RowDefinitions="Auto,*,Auto" Padding="20,95" RowSpacing="30">
+    <Grid RowDefinitions="Auto,*,Auto" Padding="20,95">
         <Image Grid.Row="0"
            Source="logo.png"
            HeightRequest="300"
@@ -14,7 +14,7 @@
            VerticalOptions="Center"
            HorizontalOptions="Center"/>
 
-        <StackLayout Grid.Row="1" Margin="0,20,0,0" Spacing="10">
+        <StackLayout Grid.Row="1" Margin="0,20,0,0">
             <Label Text="Fresh Fruit at Your Fingertips" FontSize="32" FontAttributes="Bold" 
                    FontFamily="Lobster-Regular"
                    HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>

@@ -12,7 +12,6 @@ public partial class MainPage : ContentPage
     async void TapGestureRecognizer_Tapped(System.Object sender, Microsoft.Maui.Controls.
 	TappedEventArgs e)
     {
-        //await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
         await Shell.Current.GoToAsync(nameof(LoginPage), animate: true);
     }
 }

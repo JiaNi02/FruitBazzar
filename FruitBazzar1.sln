@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FruitBazzar1", "FruitBazzar
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "FruitBazzar.database", "FruitBazzar.database\FruitBazzar.database.sqlproj", "{09D93C85-4690-49A0-8130-43DC99E5D043}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FruitBazzar1.Api", "FruitBazzar1.Api\FruitBazzar1.Api.csproj", "{D18A3C02-9611-4EFE-937E-63C8A9A7CEE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{09D93C85-4690-49A0-8130-43DC99E5D043}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09D93C85-4690-49A0-8130-43DC99E5D043}.Release|Any CPU.Build.0 = Release|Any CPU
 		{09D93C85-4690-49A0-8130-43DC99E5D043}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D18A3C02-9611-4EFE-937E-63C8A9A7CEE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D18A3C02-9611-4EFE-937E-63C8A9A7CEE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D18A3C02-9611-4EFE-937E-63C8A9A7CEE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D18A3C02-9611-4EFE-937E-63C8A9A7CEE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

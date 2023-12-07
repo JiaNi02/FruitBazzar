@@ -9,18 +9,23 @@
     xmlns:views="clr-namespace:FruitBazzar1.Views"
     xmlns:viewmodel="clr-namespace:FruitBazzar1.ViewModel"
     Shell.FlyoutBehavior="Disabled"
-    Shell.BackgroundColor="Black"
-    Shell.TabBarTitleColor="#fED480">
+    Shell.BackgroundColor="#fED480"
+    Shell.TitleColor="Black"
+    Shell.TabBarTitleColor="#6AD4A3">
 
 
     <Shell.Behaviors>
-        <toolkit:StatusBarBehavior StatusBarColor="#fED480"
+        <toolkit:StatusBarBehavior StatusBarColor="White"
                                    StatusBarStyle="DarkContent"/>
     </Shell.Behaviors>
-    <ShellContent
+    <!--<ShellContent
        Title=""
        ContentTemplate="{DataTemplate local:MainPage}"
        Route="MainPage" />
+    <ShellContent
+       Title=""
+       ContentTemplate="{DataTemplate views:LoginPage}"
+       Route="MainPage" />-->
 
     <TabBar>
         <Tab Title="Home"
@@ -36,7 +41,7 @@
 
         <Tab Title="Chat"
              Icon="{FontImage FontFamily=FAS, Glyph={x:Static helper:FontAwesomeHelper.Message}}">
-            <ShellContent ContentTemplate="{DataTemplate views:ChatPage}"
+            <ShellContent ContentTemplate="{DataTemplate views:ListChatPage}"
                           Route="ChatPage" />
         </Tab>
         <Tab Title="Cart"

@@ -8,39 +8,57 @@ namespace FruitBazzar1.Services
         {
             new Product
             { Id = 1,
-              Name= "apple",
+              Name= "Apple",
               Image="apple.png",
               Price= 2
             },
             new Product
             { Id = 2,
-              Name= "orange",
+              Name= "Orange",
               Image="orange.png",
               Price= 10
             },
             new Product
             { Id = 3,
-              Name= "banana",
+              Name= "Banana",
               Image="banana.png",
               Price= 3.5
             },
             new Product
             { Id = 4,
-              Name= "papaya",
+              Name= "Papaya",
               Image="papaya.png",
               Price= 4
             },
             new Product
             { Id = 5,
-              Name= "rambutan",
+              Name= "Rambutan",
               Image="rambutan.png",
               Price= 10
             },
             new Product
             { Id = 6,
-              Name= "watermelon",
+              Name= "Watermelon",
               Image="watermelon.png",
               Price= 4.5
+            },
+             new Product
+            { Id = 7,
+              Name= "Grapefuit",
+              Image="grapefuit.png",
+              Price= 10
+            },
+               new Product
+            { Id = 8,
+              Name= "Langsat",
+              Image="langsat.png",
+              Price= 10
+            },
+                 new Product
+            { Id = 9,
+              Name= "Kiwi",
+              Image="kiwi.png",
+              Price= 3.5
             },
         };
 

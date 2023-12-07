@@ -1,8 +1,17 @@
-﻿using System;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
+using FruitBazzar1.Model;
+using FruitBazzar1.Services;
+using FruitBazzar1.Views;
 using System.Windows.Input;
+using Microsoft.Maui.Controls;
+using FruitBazzar1.Views;
+using FruitBazzar1.Model;
 
 namespace FruitBazzar1.ViewModel
 {
@@ -10,9 +19,9 @@ namespace FruitBazzar1.ViewModel
     {
         public ICommand TapCommand { get; set; }
 
-        public string Name { get; set; } = "David Spade";
-        public string Email { get; set; } = "iamdavid@gmail.com";
-        public string ImageUrl { get; set; } = "https://raw.githubusercontent.com/exendahal/ecommerceXF/master/eCommerce/eCommerce.Android/Resources/drawable/Avatar.png";
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string ImageUrl { get; set; }
 
         public List<MenuItems> _MenuItems = new List<MenuItems>();
         public List<MenuItems> MenuItems
@@ -30,13 +39,12 @@ namespace FruitBazzar1.ViewModel
         void PopulateData()
         {
             MenuItems.Clear();
-            MenuItems.Add(new Model.MenuItems() { Title = "Edit Profile", Body = "\uf3eb", TargetType = typeof(HomePage) });
-            MenuItems.Add(new Model.MenuItems() { Title = "Shipping Address", Body = "\uf34e", TargetType = typeof(HomePage) });
-            MenuItems.Add(new Model.MenuItems() { Title = "Wishlist", Body = "\uf2d5", TargetType = typeof(HomePage) });
-            MenuItems.Add(new Model.MenuItems() { Title = "Order History", Body = "\uf150", TargetType = typeof(HomePage) });
+            MenuItems.Add(new Model.MenuItems() { Title = "Edit Profile", Body = "profile.png", TargetType = typeof(EditProfilePage) });
+            MenuItems.Add(new Model.MenuItems() { Title = "Shipping Address", Body = "profile.png", TargetType = typeof(HomePage) });
+            MenuItems.Add(new Model.MenuItems() { Title = "Order History", Body = "profile.png", TargetType = typeof(HomePage) });
             //MenuItems.Add(new Model.MenuItems() { Title = "Track Order", Body = "\uf787", TargetType = typeof(OrderDetails) });
-            MenuItems.Add(new Model.MenuItems() { Title = "Cards", Body = "\uf19b", TargetType = typeof(HomePage) });
-            MenuItems.Add(new Model.MenuItems() { Title = "Notifications", Body = "\uf09c", TargetType = typeof(HomePage) });
+            MenuItems.Add(new Model.MenuItems() { Title = "Cards", Body = "profile.png", TargetType = typeof(HomePage) });
+            MenuItems.Add(new Model.MenuItems() { Title = "Notifications", Body = "profile.png", TargetType = typeof(HomePage) });
         }
 
         private void CommandInit()
@@ -47,5 +55,10 @@ namespace FruitBazzar1.ViewModel
             });
 
         }
+        //private void EditProfile()
+        //{
+        //    // Navigate to EditProfilePage
+        //    Application.Current.MainPage.Navigation.PushModalAsync(new EditProfilePage());
+        //}
     }
 }

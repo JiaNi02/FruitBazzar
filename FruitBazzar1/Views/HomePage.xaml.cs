@@ -16,4 +16,9 @@ public partial class HomePage : ContentPage
         _homeViewModel= homeViewModel;
 		BindingContext = _homeViewModel;
     }
+    private void OnButtonClicked(object sender, EventArgs e)
+    {
+        // Navigate to the NotificationPage when the button is clicked
+        Navigation.PushAsync(new NotificationPage());
+    }
 }

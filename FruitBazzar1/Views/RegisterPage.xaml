@@ -3,17 +3,64 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:helpers="clr-namespace:FruitBazzar1.Helper"
              x:Class="FruitBazzar1.Views.RegisterPage"
-             Shell.NavBarIsVisible="False"
              BackgroundColor="#fED480"
-             Title="RegisterPage">
+             Title="              Register">
 
-    <ContentPage.Resources>
-        <x:String x:Key="user">&#xf007;</x:String>
-        <x:String x:Key="envelope">&#xf0e0;</x:String>
-        <x:String x:Key="lock">&#xf023;</x:String>
-    </ContentPage.Resources>
+    <Grid>
+        <VerticalStackLayout Margin="30" VerticalOptions="Center">
+            <Image Source="logo.png"  HeightRequest="300" WidthRequest="300" HorizontalOptions="Center"/>
 
-    <VerticalStackLayout
+            <Frame
+                Margin="0,15,0,0"
+                Padding="10,0,10,0"
+                CornerRadius="5"
+                BorderColor="#FF7530">
+                <Entry
+                    Placeholder="Name"
+                    ReturnType="Go"
+                    TextColor="Black" />
+            </Frame>
+            <Frame
+                Margin="0,15,0,0"
+                Padding="10,0,10,0"
+                CornerRadius="5"
+                BorderColor="#FF7530">
+                <Entry
+                    Placeholder="Mobile Phone"
+                    ReturnType="Go"
+                    TextColor="Black" />
+            </Frame>
+            <Frame
+                Margin="0,15,0,0"
+                Padding="10,0,10,0"
+                CornerRadius="5"
+                BorderColor="#FF7530">
+                <Entry
+                    Placeholder="Email"
+                    ReturnType="Go"
+                    TextColor="Black" />
+            </Frame>
+            <Frame
+                Margin="0,15,0,0"
+                Padding="10,0,10,0"
+                 CornerRadius="5"
+                BorderColor="#FF7530">
+                <Entry
+                    IsPassword="True"
+                    Placeholder="Password"
+                    ReturnType="Go"
+                    TextColor="Black" />
+            </Frame>
+            <StackLayout Grid.Row="4" Grid.ColumnSpan="2" Orientation="Horizontal" Margin="0,10,0,0">
+                <CheckBox x:Name="TermsCheckbox" />
+                <Label Text="I agree to the terms and conditions" VerticalOptions="Center"/>
+            </StackLayout>
+
+            <Button Grid.Row="6" Text="Submit" Command="{Binding SubmitCommand}" BackgroundColor="Black" TextColor="White" />
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
+<!--<VerticalStackLayout
         Spacing="15"
         Padding="30,0"
         VerticalOptions="Center">
@@ -81,12 +128,12 @@
                 </StackLayout>
 
 
-                <!--<Button x:Name="BtnLogin" Text="Sign in" TextColor="#18282F" 
+                --><!--<Button x:Name="BtnLogin" Text="Sign in" TextColor="#18282F" 
                 WidthRequest="100" 
                 CornerRadius="20"
                 HorizontalOptions="Center" 
                 BackgroundColor="White"
-                Clicked="BtnLogin_Clicked"/>-->
+                Clicked="BtnLogin_Clicked"/>--><!--
                 <Border StrokeShape="RoundRectangle 25"
                     StrokeThickness="0"
                     BackgroundColor="Black"
@@ -113,5 +160,4 @@
             </StackLayout>
         </Grid>
 
-    </VerticalStackLayout>
-</ContentPage>
+    </VerticalStackLayout>-->

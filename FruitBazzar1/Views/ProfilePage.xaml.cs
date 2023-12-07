@@ -1,10 +1,15 @@
-namespace FruitBazzar1.Views;
+using Microsoft.Maui.Controls;
 
-public partial class ProfilePage : ContentPage
+namespace FruitBazzar1.Views
 {
-	public ProfilePage()
-	{
-		InitializeComponent();
-        BindingContext = new ProfileViewModel();
+    public partial class ProfilePage : ContentPage
+    {
+        public ProfilePage()
+        {
+            InitializeComponent();
+            BindingContext = new ProfileViewModel();
+        }
     }
+
 }
+

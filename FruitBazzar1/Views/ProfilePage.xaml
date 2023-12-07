@@ -2,54 +2,35 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FruitBazzar1.Views.ProfilePage"
+             x:Name="profilePage"
              Title="ProfilePage">
+    <VerticalStackLayout>
+        <Grid ColumnDefinitions="*, Auto,*"
+                      RowDefinitions="160, Auto">
 
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <OnPlatform x:TypeArguments="x:String" x:Key="FontAwesome">
-                <On Platform="Android, iOS">
-                    FontAwesome5Free-Regular.otf#Regular
-                </On>
-            </OnPlatform>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-    
-    <!--<ContentPage.Resources>
-        <x:String x:Key="pen-to-square">&#xf044;</x:String>
-        <x:String x:Key="truck">&#xf0d1;</x:String>
-        <x:String x:Key="list">&#xf03a;</x:String>
-        <x:String x:Key="clock-rotate-left">&#xf1da;</x:String>
-        <x:String x:Key="credit-card">&#xf09d;</x:String>
-        <x:String x:Key="bell">&#xf0f3;</x:String>
-    </ContentPage.Resources>-->
+            <BoxView BackgroundColor="Orange"
+                             Grid.ColumnSpan="3"
+                             HeightRequest="160"
+                             HorizontalOptions="FillAndExpand"/>
 
-    <StackLayout>
-        <StackLayout Orientation="Horizontal" Margin="15,30">
-            <Border StrokeShape="RoundRectangle 6"
-                    Grid.Column="0"
-                    Background="Transparent"
-                    StrokeThickness="0">
-                <Image Aspect="AspectFit"
-                       HeightRequest="120"
-                       Source="{Binding ImageUrl}"
-                       WidthRequest="120" />
-            </Border>
+            <Frame Grid.RowSpan="2"
+                           Grid.Column="1"
+                           HeightRequest="160"
+                           WidthRequest="160"
+                           CornerRadius="80"
+                           HorizontalOptions="Center"
+                           IsClippedToBounds="True"
+                           Padding="0"
+                           Margin="0,80,0,0">
 
-            <StackLayout Margin="20"
-                         VerticalOptions="CenterAndExpand">
-                <Label FontAttributes="Bold"
-                       FontSize="26"
-                       HorizontalOptions="CenterAndExpand"
-                       Text="David Spade"
-                       TextColor="Black"
-                       VerticalTextAlignment="Center" />
-                <Label FontSize="14"
-                       HorizontalOptions="CenterAndExpand"
-                       Text="iamdavid@gmail.com"
-                       TextColor="Black"
-                       VerticalTextAlignment="Center" />
-            </StackLayout>
-        </StackLayout>
+                <Image Aspect="AspectFill"
+                               HeightRequest="160"
+                               WidthRequest="160"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               Source="people.png"/>
+            </Frame>
+        </Grid>
         <CollectionView ItemsSource="{Binding MenuItems}"
                         Margin="12">
 
@@ -82,7 +63,7 @@
                                 </LinearGradientBrush>
                             </Border.Background>
                             <Label FontSize="22"
-                                   FontFamily="{StaticResource FontAwesome}"
+                                   FontFamily="icon"
                                    HorizontalOptions="Center"
                                    VerticalOptions="Center"
                                    Text="{Binding Body}"
@@ -117,6 +98,5 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-    </StackLayout>
-
+    </VerticalStackLayout>
 </ContentPage>
