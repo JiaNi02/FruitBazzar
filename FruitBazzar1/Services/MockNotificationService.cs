@@ -14,72 +14,72 @@ namespace FruitBazzar1.Services
         {
             new Notifications()
             {
-                Title = "Title",
-                Content = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-                ImagePath = "notif_image.png",
+                Title = "New Fruit",
+                Content = "Explore the latest fruits in our store!",
+                ImageSource = "notif_image.png",
+                NotificationDateTime = DateTime.Now
+            },
+            new Notifications()
+            {
+                Title = "Special Offer",
+                Content = "Get 20% off on all tropical fruits!",
+                ImageSource = "notif_image.png",
+                NotificationDateTime = DateTime.Now
+            },
+            new Notifications()
+            {
+                Title = "Seasonal Picks",
+                Content = "Check out our seasonal fruit recommendations.",
+                ImageSource = "notif_image.png",
+                NotificationDateTime = DateTime.Now
+            },
+            new Notifications()
+            {
+                Title = "Fresh Arrival",
+                Content = "New batch of strawberries just in!",
+                ImageSource = "notif_image.png",
+                NotificationDateTime = DateTime.Now
+            },
+            new Notifications()
+            {
+                Title = "Weekly Special",
+                Content = "Apple sale: Buy 2, Get 1 Free!",
+                ImageSource = "notif_image.png",
                 NotificationDateTime = DateTime.Now
             },
             new Notifications()
             {
                 Title = "Title",
                 Content = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-                ImagePath = "notif_image.png",
+                ImageSource = "notif_image.png",
                 NotificationDateTime = DateTime.Now
             },
             new Notifications()
             {
                 Title = "Title",
                 Content = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-                ImagePath = "notif_image.png",
+                ImageSource = "notif_image.png",
                 NotificationDateTime = DateTime.Now
             },
             new Notifications()
             {
                 Title = "Title",
                 Content = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-                ImagePath = "notif_image.png",
+                ImageSource = "notif_image.png",
                 NotificationDateTime = DateTime.Now
             },
             new Notifications()
             {
                 Title = "Title",
                 Content = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-                ImagePath = "notif_image.png",
+                ImageSource = "notif_image.png",
                 NotificationDateTime = DateTime.Now
             },
             new Notifications()
             {
                 Title = "Title",
                 Content = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-                ImagePath = "notif_image.png",
-                NotificationDateTime = DateTime.Now
-            },
-            new Notifications()
-            {
-                Title = "Title",
-                Content = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-                ImagePath = "notif_image.png",
-                NotificationDateTime = DateTime.Now
-            },
-            new Notifications()
-            {
-                Title = "Title",
-                Content = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-                ImagePath = "notif_image.png",
-                NotificationDateTime = DateTime.Now
-            },
-            new Notifications()
-            {
-                Title = "Title",
-                Content = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-                ImagePath = "notif_image.png",
-                NotificationDateTime = DateTime.Now
-            },
-            new Notifications()
-            {
-                Title = "Title",
-                Content = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-                ImagePath = "notif_image.png",
+                ImageSource = "notif_image.png",
                 NotificationDateTime = DateTime.Now
             }
         };
@@ -93,13 +93,11 @@ namespace FruitBazzar1.Services
                 Title = "Title",
                 Content =
                     "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-                ImagePath = "notif_image.png",
+                ImageSource = "notif_image.png",
                 NotificationDateTime = DateTime.Now
             });
         }
+
     }
 
-    public interface INotificationService
-    {
-    }
 }

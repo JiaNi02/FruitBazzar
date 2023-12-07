@@ -13,6 +13,29 @@
              Padding="15">
     <ScrollView>
         <VerticalStackLayout Spacing="10">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Discover a world of fresh, delicious fruits at your fingertips."
+           HorizontalOptions="Start"
+           FontAttributes="Bold"
+           FontSize="23"
+           HeightRequest="100"
+           WidthRequest="320"
+           LineBreakMode="WordWrap"/>
+
+                <Button BackgroundColor="#152c39"
+            CornerRadius="45"
+            HeightRequest="32"
+            WidthRequest="32"
+            HorizontalOptions="End"
+            Clicked="OnButtonClicked">
+                    <Button.ImageSource>
+                        <FontImageSource
+                FontFamily="FAS"
+                Glyph="{x:Static helpers:FontAwesomeHelper.Bell}"
+                Size="18" />
+                    </Button.ImageSource>
+                </Button>
+            </StackLayout>
             <Border StrokeShape="RoundRectangle 10"
                     StrokeThickness="0"
                     BackgroundColor="#D3EEE0"

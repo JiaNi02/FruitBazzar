@@ -10,7 +10,7 @@ namespace FruitBazzar1.Model
     {
         public string Title { get; set; }
         public string Content { get; set; }
-        public string ImagePath { get; set; }
+        public string ImageSource { get; set; }
         public DateTime? NotificationDateTime { get; set; } 
     }
 }

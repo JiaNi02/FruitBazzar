@@ -83,6 +83,7 @@
 	  <None Remove="Resources\Images\login.png" />
 	  <None Remove="Resources\Images\logo.png" />
 	  <None Remove="Resources\Images\minus.png" />
+	  <None Remove="Resources\Images\notif_image.png" />
 	  <None Remove="Resources\Images\orange.png" />
 	  <None Remove="Resources\Images\p1.jpg" />
 	  <None Remove="Resources\Images\papaya.png" />
@@ -148,6 +149,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\NotificationDetailPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\NotificationPage.xaml">

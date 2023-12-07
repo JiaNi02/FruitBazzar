@@ -4,9 +4,12 @@ namespace FruitBazzar1.Views;
 
 public partial class NotificationPage : ContentPage
 {
-	public NotificationPage()
-	{
-		InitializeComponent();
-       
+    private NotificationViewModel _viewModel;
+
+    public NotificationPage()
+    {
+        InitializeComponent();
+        _viewModel = new NotificationViewModel(new MockNotificationService());
+        BindingContext = _viewModel;
     }
 }

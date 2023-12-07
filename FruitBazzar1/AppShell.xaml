@@ -18,14 +18,14 @@
         <toolkit:StatusBarBehavior StatusBarColor="White"
                                    StatusBarStyle="DarkContent"/>
     </Shell.Behaviors>
-    <ShellContent
+    <!--<ShellContent
        Title=""
        ContentTemplate="{DataTemplate local:MainPage}"
        Route="MainPage" />
     <ShellContent
        Title=""
        ContentTemplate="{DataTemplate views:LoginPage}"
-       Route="MainPage" />
+       Route="MainPage" />-->
 
     <TabBar>
         <Tab Title="Home"
