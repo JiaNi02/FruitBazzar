@@ -5,11 +5,11 @@ public partial class RegisterPage : ContentPage
 	public RegisterPage()
 	{
 		InitializeComponent();
-		
-	}
-    async void TapGestureRecognizer_Tapped(System.Object sender, Microsoft.Maui.Controls.
-    TappedEventArgs e)
+       
+    }
+    async void TapGestureRecognizer_Tapped(object sender,EventArgs e)
     {
-        await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+        //await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+        await Shell.Current.GoToAsync(nameof(LoginPage), animate: true);
     }
 }

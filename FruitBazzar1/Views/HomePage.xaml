@@ -8,9 +8,12 @@
              xmlns:viewmodel="clr-namespace:FruitBazzar1.ViewModel"
              x:Class="FruitBazzar1.Views.HomePage"
              x:DataType="viewmodel:HomeViewModel"
-             Title="HomePage"
+             Title="Home"
              Shell.NavBarIsVisible="True"
              Padding="15">
+
+    
+
     <ScrollView>
         <VerticalStackLayout Spacing="10">
             <Border StrokeShape="RoundRectangle 10"

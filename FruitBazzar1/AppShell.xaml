@@ -10,11 +10,11 @@
     xmlns:viewmodel="clr-namespace:FruitBazzar1.ViewModel"
     Shell.FlyoutBehavior="Disabled"
     Shell.BackgroundColor="Black"
-    Shell.TabBarTitleColor="#6AD4A3">
+    Shell.TabBarTitleColor="#fED480">
 
 
     <Shell.Behaviors>
-        <toolkit:StatusBarBehavior StatusBarColor="#6AD4A3"
+        <toolkit:StatusBarBehavior StatusBarColor="#fED480"
                                    StatusBarStyle="DarkContent"/>
     </Shell.Behaviors>
     <ShellContent
@@ -30,8 +30,8 @@
         </Tab>
         <Tab Title="Category"
              Icon="{FontImage FontFamily=FAS, Glyph={x:Static helper:FontAwesomeHelper.Box}}">
-            <ShellContent ContentTemplate="{DataTemplate views:CategoryDetail}"
-                          Route="CategoryDetail" />
+            <ShellContent ContentTemplate="{DataTemplate views:CategoryPage}"
+                          Route="CategoryPage" />
         </Tab>
 
         <Tab Title="Chat"

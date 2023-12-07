@@ -82,6 +82,7 @@ namespace FruitBazzar1.ViewModel
             CartCleared?.Invoke(this, EventArgs.Empty);
             RecalculateTotalAmount();
             await Shell.Current.GoToAsync(nameof(CheckoutPage), animate: true);
+            //await Shell.Current.GoToAsync($"//{nameof(CheckoutPage)}");
         }
     }
 }

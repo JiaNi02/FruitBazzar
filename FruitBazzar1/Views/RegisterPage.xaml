@@ -4,8 +4,15 @@
              xmlns:helpers="clr-namespace:FruitBazzar1.Helper"
              x:Class="FruitBazzar1.Views.RegisterPage"
              Shell.NavBarIsVisible="False"
-             BackgroundColor="#D3EEE0"
+             BackgroundColor="#fED480"
              Title="RegisterPage">
+
+    <ContentPage.Resources>
+        <x:String x:Key="user">&#xf007;</x:String>
+        <x:String x:Key="envelope">&#xf0e0;</x:String>
+        <x:String x:Key="lock">&#xf023;</x:String>
+    </ContentPage.Resources>
+
     <VerticalStackLayout
         Spacing="15"
         Padding="30,0"
@@ -16,7 +23,7 @@
         <Grid RowSpacing="5" Grid.Row="1" Margin="20,20,20,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="50"/>
+                <RowDefinition Height="40"/>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="40"/>
@@ -27,28 +34,46 @@
             
 
             <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
-                <Frame BackgroundColor="Transparent" BorderColor="#1D8348" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" Margin="5" >
+                <Frame BackgroundColor="Transparent" BorderColor="Black" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" Margin="5" >
                     <StackLayout Orientation="Horizontal">
-                        <Frame BackgroundColor="Black" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0">
+                        <!--<Frame BackgroundColor="Black" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0">
                             <Image Source="profile.jpg" Aspect="AspectFill"/>
-                        </Frame>
-                        <Entry Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Fullname" FontAttributes="Bold" TextColor="White"/>
+                        </Frame>-->
+
+                        <Image WidthRequest="50" HeightRequest="20">
+                            <Image.Source>
+                                <FontImageSource FontFamily="FAS" Glyph="{StaticResource user}" Color="Black" Size="15"/>
+                            </Image.Source>
+                        </Image>
+                                <Entry Margin="10,0,0,0" VerticalOptions="Center" Placeholder="Fullname" FontAttributes="Bold" TextColor="Black"/>
                     </StackLayout>
                 </Frame>
-                <Frame BackgroundColor="Transparent" BorderColor="#1D8348" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" Margin="5" >
+                <Frame BackgroundColor="Transparent" BorderColor="Black" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" Margin="5" >
                     <StackLayout Orientation="Horizontal">
-                        <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0">
+                        <!--<Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0">
                             <Image Source="profile.jpg" Aspect="AspectFill"/>
-                        </Frame>
-                        <Entry Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Email" FontAttributes="Bold" TextColor="White"/>
+                        </Frame>-->
+
+                        <Image WidthRequest="50" HeightRequest="20">
+                            <Image.Source>
+                                <FontImageSource FontFamily="FAS" Glyph="{StaticResource envelope}" Color="Black" Size="15"/>
+                            </Image.Source>
+                        </Image>
+                        <Entry Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Email" FontAttributes="Bold" TextColor="Black"/>
                     </StackLayout>
                 </Frame>
-                <Frame BackgroundColor="Transparent" BorderColor="#1D8348" Padding="0" Margin="5,5,0,0" HorizontalOptions="FillAndExpand" CornerRadius="30"  >
+                <Frame BackgroundColor="Transparent" BorderColor="Black" Padding="0" Margin="5,5,0,0" HorizontalOptions="FillAndExpand" CornerRadius="30"  >
                     <StackLayout Orientation="Horizontal">
-                        <Frame BackgroundColor="SkyBlue" HeightRequest="20" WidthRequest="35" CornerRadius="30" Padding="0">
+                        <!--<Frame BackgroundColor="SkyBlue" HeightRequest="20" WidthRequest="35" CornerRadius="30" Padding="0">
                             <Image Source="lockicon.png" Aspect="AspectFill"/>
-                        </Frame>
-                        <Entry Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Password" IsPassword="True" FontAttributes="Bold" TextColor="White"/>
+                        </Frame>-->
+
+                        <Image WidthRequest="50" HeightRequest="20">
+                            <Image.Source>
+                                <FontImageSource FontFamily="FAS" Glyph="{StaticResource lock}" Color="Black" Size="15"/>
+                            </Image.Source>
+                        </Image>
+                        <Entry Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Password" IsPassword="True" FontAttributes="Bold" TextColor="Black"/>
                     </StackLayout>
                 </Frame>
                 <StackLayout Orientation="Horizontal" Margin="0,30,0,0" Padding="0">
@@ -64,7 +89,7 @@
                 Clicked="BtnLogin_Clicked"/>-->
                 <Border StrokeShape="RoundRectangle 25"
                     StrokeThickness="0"
-                    BackgroundColor="#1D8348"
+                    BackgroundColor="Black"
                     HeightRequest="50"
                     WidthRequest="250">
                     <Border.GestureRecognizers>
@@ -75,7 +100,8 @@
                                        Spacing="10">
                         <Label Text="Login"
                            VerticalOptions="Center"
-                           FontSize="18"/>
+                           FontSize="18"
+                               TextColor="White"/>
                         <Image Source="{x:Static helpers:FontAwesomeHelper.MagnifyingGlassArrowRight}"
                            VerticalOptions="Center"
                            HeightRequest="30"/>

@@ -10,21 +10,9 @@ namespace FruitBazzar1.Model
 {
     public class Category
     {
-        public Category(short id, string name, short parentId, string image)
-        {
-            Id = id;
-            Name = name;
-            Image = image;
-            ParentId = parentId;
-        }
-
-        public short Id { get; set; }
-        public string Name { get; set; }
+        public int CategoryID { get; set; }
+        public string CategoryName { get; set; }
         public string Image { get; set; }
-        public short ParentId { get; set; }
-
-
-        public bool IsMainCategory => ParentId == 0;
 
     }
 
