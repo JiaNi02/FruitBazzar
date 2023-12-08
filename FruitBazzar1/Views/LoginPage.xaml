@@ -70,7 +70,7 @@
                         WidthRequest="32" />
                 </Frame>
             </HorizontalStackLayout>
-            
+
             <StackLayout Orientation="Horizontal" Spacing="7" >
                 <Label Text="Forgot Passowrd?" TextColor="#1e90ff"/>
                 <Label Text="Sign Up Here" TextColor="#1e90ff" FontAttributes="Bold">
@@ -91,98 +91,4 @@
 
         </VerticalStackLayout>
     </Grid>
-    <!--<VerticalStackLayout
-        Spacing="15"
-        Padding="30,0"
-        VerticalOptions="Center">
-
-    <ScrollView>
-        <Grid>
-            <VerticalStackLayout Margin="30" VerticalOptions="Center" Spacing="10">
-                <Image Source="logo.png" HeightRequest="300" WidthRequest="300" HorizontalOptions="Center"/>
-                <Label FontSize="30"
-                   HorizontalOptions="Center"
-                   Text="Sign In"/>
-                <Frame Margin="0,30,0,0"
-                   Padding="10,0,10,0"
-                   BorderColor="Transparent">
-                    <Entry Placeholder="User name"
-                       ReturnType="Go"
-                       Text="{Binding UserName}"
-                       TextColor="Black"/>
-                </Frame>
-
-        <Grid RowSpacing="5" Grid.Row="1" Margin="20,20,20,0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Label Grid.Row="1" Text="Welcome!" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold" Padding="0" Margin="0"/>
-            <Label Grid.Row="2" Text="Sign in to continue" HorizontalOptions="Center" FontSize="Subtitle"/>
-
-            <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
-                <Frame BackgroundColor="Transparent" BorderColor="White" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" >
-                    <StackLayout Orientation="Horizontal">
-                        <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0">
-                            <Image Source="profile.jpg" Aspect="AspectFill"/>
-                        </Frame>
-                        <Entry Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Fullname" FontAttributes="Bold" TextColor="White"/> 
-                    </StackLayout>
-                </Frame>
-                <Frame BackgroundColor="Transparent" BorderColor="White" Padding="0" Margin="0,15,0,0" HorizontalOptions="FillAndExpand" CornerRadius="30">
-                    <StackLayout Orientation="Horizontal">
-                        <Frame BackgroundColor="SkyBlue" HeightRequest="20" WidthRequest="35" CornerRadius="30" Padding="0">
-                            <Image Source="lockicon.png" Aspect="AspectFill"/>
-                        </Frame>
-                        <Entry Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Password" IsPassword="True" FontAttributes="Bold" TextColor="White"/> 
-                    </StackLayout>
-                </Frame>
-                <StackLayout Orientation="Horizontal" Margin="0,10,0,0" Padding="0">
-                    <CheckBox IsChecked="False"/>
-                    <Label Text="Remenber me" TextColor="White" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
-                </StackLayout>
-
-                <Border StrokeShape="RoundRectangle 25"
-                    StrokeThickness="0"
-                    BackgroundColor="White"
-                    HeightRequest="50"
-                    WidthRequest="300">
-                    <Border.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
-                    </Border.GestureRecognizers>
-                    <HorizontalStackLayout HorizontalOptions="Center"
-                                       VerticalOptions="Center"
-                                       Spacing="10">
-                        <Label Text="Login"
-                           VerticalOptions="Center"
-                           FontSize="18"/>
-                        <Image Source="{x:Static helpers:FontAwesomeHelper.MagnifyingGlassArrowRight}"
-                           VerticalOptions="Center"
-                           HeightRequest="30"/>
-                    </HorizontalStackLayout>
-
-                </Border>
-
-                <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="Center">
-                    <Label Text="Don't have account?" TextColor="White"/>
-                    <Label Text="Sign Up Here" TextColor="Black" FontAttributes="Bold">
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="SignUpLabel_Tapped"/>
-                        </Label.GestureRecognizers>
-                    </Label>
-                </StackLayout>
-            </StackLayout>
-        </Grid>
-
-    </VerticalStackLayout>-->
-
-        </Grid>
-    </ScrollView>
-
-
 </ContentPage>

@@ -3,10 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FruitBazzar1.Views.EditProfilePage"
              Title="EditProfilePage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+
+    <VerticalStackLayout Spacing="25"
+                         Padding="10,0"
+                         VerticalOptions="Center">
+
+        <Entry Placeholder="HELLO"
+               HorizontalOptions="Center"/>
+
     </VerticalStackLayout>
+        
 </ContentPage>
