@@ -11,6 +11,9 @@
              Title="Home"
              Shell.NavBarIsVisible="False"
              Padding="15">
+
+    
+
     <ScrollView>
         <VerticalStackLayout Spacing="10">
             <StackLayout Orientation="Horizontal">

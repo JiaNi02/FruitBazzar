@@ -28,8 +28,8 @@
         </Tab>
         <Tab Title="Category"
              Icon="{FontImage FontFamily=FAS, Glyph={x:Static helper:FontAwesomeHelper.Box}}">
-            <ShellContent ContentTemplate="{DataTemplate views:CategoryDetail}"
-                          Route="CategoryDetail" />
+            <ShellContent ContentTemplate="{DataTemplate views:CategoryPage}"
+                          Route="CategoryPage" />
         </Tab>
 
         <Tab Title="Chat"

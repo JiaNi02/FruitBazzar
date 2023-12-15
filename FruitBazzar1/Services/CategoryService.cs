@@ -10,6 +10,5 @@ namespace FruitBazzar1.Services
 	public class CategoryService
 	{
 		
-		
 	}
 }
