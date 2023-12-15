@@ -9,7 +9,7 @@
              x:Class="FruitBazzar1.Views.HomePage"
              x:DataType="viewmodel:HomeViewModel"
              Title="Home"
-             Shell.NavBarIsVisible="True"
+             Shell.NavBarIsVisible="False"
              Padding="15">
     <ScrollView>
         <VerticalStackLayout Spacing="10">

@@ -10,7 +10,7 @@ public partial class App : Application
     {
         InitializeComponent();
 
-        MainPage = appShell;
+        MainPage = new AppShell();
     }
 
 

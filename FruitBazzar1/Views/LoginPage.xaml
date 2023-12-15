@@ -42,7 +42,8 @@
                 Margin="0,30,0,0"
                 Background="Black"
                 Text="Login"
-                TextColor="White" />
+                Clicked="TapGestureRecognizer_Tapped"
+                TextColor="White"/>
 
             <HorizontalStackLayout Margin="0,30,0,0" HorizontalOptions="Center">
                 <Line

@@ -18,8 +18,7 @@ public partial class LoginPage : ContentPage
     {
         await Navigation.PushAsync(new RegisterPage());
     }
-    async void TapGestureRecognizer_Tapped(System.Object sender, Microsoft.Maui.Controls.
-    TappedEventArgs e)
+    async void TapGestureRecognizer_Tapped(Object sender, EventArgs e)
     {
         await Shell.Current.GoToAsync(nameof(HomePage), animate: true);
     }

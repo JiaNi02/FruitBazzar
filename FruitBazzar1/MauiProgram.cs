@@ -29,11 +29,10 @@ public static class MauiProgram
 
         builder.Services.AddSingleton<ChatHub>();
         builder.Services.AddSingleton<AppShell>();
-        builder.Services.AddSingleton<LoginPage>();
         builder.Services.AddSingleton<ListChatPage>();
         builder.Services.AddSingleton<ChatPage>();
-        //builder.Services.AddSingleton<LoginPageViewModel>();
-        builder.Services.AddSingleton<ListChatPageViewModel>();
+		//builder.Services.AddSingleton<LoginPageViewModel>();
+		builder.Services.AddSingleton<ListChatPageViewModel>();
         builder.Services.AddSingleton<ChatPageViewModel>();
         builder.Services.AddSingleton<ServiceProvider>();
 
@@ -50,9 +49,14 @@ public static class MauiProgram
 
 		services.AddSingleton<HomePage>()
 				.AddSingleton<HomeViewModel>();
+        services.AddSingleton<LoginPage>()
+                .AddSingleton<LoginViewModel>();
+        services.AddSingleton<RegisterPage>()
+               .AddSingleton<RegisterViewModel>();
 
 
-		services.AddTransientWithShellRoute<ProductPage,ProductViewModel>(nameof(ProductPage));
+
+        services.AddTransientWithShellRoute<ProductPage,ProductViewModel>(nameof(ProductPage));
         services.AddTransientWithShellRoute<DetailsPage, DetailsViewModel>(nameof(DetailsPage));
         services.AddTransientWithShellRoute<ProfilePage, ProfileViewModel>(nameof(ProfilePage));
 

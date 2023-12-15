@@ -64,7 +64,6 @@
     <Build Include="dbo\Tables\Products.sql" />
     <Build Include="dbo\Tables\Payment.sql" />
     <Build Include="dbo\Tables\Orders.sql" />
-    <Build Include="dbo\Tables\OrderItems.sql" />
     <Build Include="dbo\Tables\Customers.sql" />
     <Build Include="dbo\Tables\Category.sql" />
     <Build Include="dbo\Tables\CartItem.sql" />
