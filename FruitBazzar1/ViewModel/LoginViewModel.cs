@@ -52,8 +52,8 @@ namespace FruitBazzar1.ViewModel
 
         private async void ExecuteLogin()
         {
-
-            await Application.Current.MainPage.Navigation.PushAsync(new HomePage());
+            await Shell.Current.GoToAsync("//maintab");
+            //await Application.Current.MainPage.Navigation.PushAsync(new HomePage());
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

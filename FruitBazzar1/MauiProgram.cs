@@ -33,7 +33,6 @@ public static class MauiProgram
         builder.Services.AddSingleton<ChatPage>();
 		//builder.Services.AddSingleton<LoginPageViewModel>();
 		builder.Services.AddSingleton<ListChatPageViewModel>();
-        builder.Services.AddSingleton<ChatPageViewModel>();
         builder.Services.AddSingleton<ServiceProvider>();
 
 #if DEBUG
@@ -61,6 +60,8 @@ public static class MauiProgram
         services.AddTransientWithShellRoute<ProfilePage, ProfileViewModel>(nameof(ProfilePage));
 
 
+        services.AddSingleton<CartViewModel>()
+                .AddSingleton<CartPage>();
         return services;
 	}
 }

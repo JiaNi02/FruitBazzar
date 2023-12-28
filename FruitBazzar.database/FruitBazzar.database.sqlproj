@@ -62,10 +62,13 @@
   <ItemGroup>
     <Build Include="dbo\Tables\Review.sql" />
     <Build Include="dbo\Tables\Products.sql" />
-    <Build Include="dbo\Tables\Payment.sql" />
     <Build Include="dbo\Tables\Orders.sql" />
     <Build Include="dbo\Tables\Customers.sql" />
     <Build Include="dbo\Tables\Category.sql" />
     <Build Include="dbo\Tables\CartItem.sql" />
+    <Build Include="dbo\Tables\Purchase.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="FruitBazzar.database.refactorlog" />
   </ItemGroup>
 </Project>

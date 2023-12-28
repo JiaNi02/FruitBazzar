@@ -4,11 +4,11 @@
              xmlns:helpers="clr-namespace:FruitBazzar1.Helper"
              x:Class="FruitBazzar1.Views.LoginPage"
               Shell.NavBarIsVisible="False"
-             BackgroundColor="#fED480"
+             BackgroundColor="#F1F1F1"
              Title="LoginPage" >
     <Grid>
         <VerticalStackLayout Margin="30" VerticalOptions="Center">
-            <Image Source="logo.png"  HeightRequest="300" WidthRequest="300" HorizontalOptions="Center"/>
+            <Image Source="fruitlogo.png"  HeightRequest="300" WidthRequest="300" HorizontalOptions="Center"/>
             <Label
                 FontSize="28"
                 HorizontalOptions="Center"
@@ -19,7 +19,7 @@
                 Margin="0,45,0,0"
                 Padding="10,0,10,0"
                 CornerRadius="15"
-                BorderColor="Transparent">
+                BorderColor="#152c39">
                 <Entry
                     Placeholder="User name"
                     ReturnType="Go"
@@ -30,7 +30,7 @@
                 Margin="0,10,0,0"
                 Padding="10,0,10,0"
                  CornerRadius="15"
-                BorderColor="Transparent">
+                BorderColor="#152c39">
                 <Entry
                     IsPassword="True"
                     Placeholder="Password"
@@ -40,7 +40,7 @@
 
             <Button
                 Margin="0,30,0,0"
-                Background="Black"
+                Background="#152c39"
                 Text="Login"
                 Clicked="TapGestureRecognizer_Tapped"
                 TextColor="White"/>

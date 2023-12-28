@@ -1,7 +1,9 @@
+using FruitBazzar1.Api;
 using FruitBazzar1.Api.Controllers.ChatHub;
 using FruitBazzar1.Api.Entities;
 using FruitBazzar1.Api.Functions.Message;
 using FruitBazzar1.Api.Functions.UserFriend;
+using FruitBazzar1.Api.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,27 +16,29 @@ builder.Services.AddSignalR();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<ChatAppContext>(options =>
+builder.Services.AddDbContext<FruitBazzardatabaseContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Deafult Connection"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
-builder.Services.AddTransient<IUserFunction, UserFunction>();
-builder.Services.AddTransient<IUserFriendFunction, UserFriendFunction>();
-builder.Services.AddTransient<IMessageFunction, MessageFunction>();
-builder.Services.AddScoped<UserOperator>();
-builder.Services.AddScoped<ChatHub>();
+//builder.Services.AddTransient<IUserFunction, UserFunction>();
+//builder.Services.AddTransient<IUserFriendFunction, UserFriendFunction>();
+//builder.Services.AddTransient<IMessageFunction, MessageFunction>();
+//builder.Services.AddScoped<UserOperator>();
+//builder.Services.AddScoped<ChatHub>();
 
-builder.Services.AddHttpContextAccessor();
+//builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+//if (app.Environment.IsDevelopment())
+//{
+//    app.UseSwagger();
+//    app.UseSwaggerUI();
+//}
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 app.UseRouting();
@@ -45,10 +49,10 @@ app.UseMiddleware<JwtMiddleware>();
 
 //app.MapControllers();
 
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllers();
-    endpoints.MapHub<ChatHub>("/ChatHub");
-});
+//app.UseEndpoints(endpoints =>
+//{
+//    endpoints.MapControllers();
+//    endpoints.MapHub<ChatHub>("/ChatHub");
+//});
 
 app.Run();

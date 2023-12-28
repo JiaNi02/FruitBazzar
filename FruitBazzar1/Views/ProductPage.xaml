@@ -8,7 +8,8 @@
              xmlns:viewmodel="clr-namespace:FruitBazzar1.ViewModel"
              x:Class="FruitBazzar1.Views.ProductPage"
              x:DataType="viewmodel:ProductViewModel"
-             Title="               All Items">
+             Title="               All Items"
+             BackgroundColor="#F1F1F1">
     
     <ContentPage.Triggers>
         <DataTrigger TargetType="ContentPage"
@@ -40,9 +41,14 @@
                         <DataTemplate x:DataType="models:Product">
                             <Border StrokeShape="RoundRectangle 10"
                                     StrokeThickness="0"
-                                    BackgroundColor="#fED480"
+                                    BackgroundColor="White"
                                     Padding="10"
                                     Margin="5">
+                                <Border.Shadow>
+                                    <Shadow Brush="Black"
+                                     Radius="40"
+                                     Opacity="0.2"/>
+                                </Border.Shadow>
                                 <Grid ColumnDefinitions="130,*"
                                       ColumnSpacing="10">
                                     <Image Grid.Column="0"

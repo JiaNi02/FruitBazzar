@@ -39,7 +39,7 @@
 
                 <Grid ColumnDefinitions="*,*">
                     <Label Grid.Column="0"
-                           Text="{Binding Product.Price, StringFormat=$'{0:N2}'}"
+                           Text="{Binding Product.Price, StringFormat=RM'{0:N2}'}"
                            FontAttributes="Bold"
                            FontSize="18"/>
                     <HorizontalStackLayout Grid.Column="1"
@@ -68,14 +68,12 @@
                        Text="This is some random description of fruit that can display this icon the.This is some random description of 
                              fruit that can display this icon the.This is some random description of fruit that can display this icon 
                              the.This is some random description of fruit that can display this icon the.This is some random description 
-                             of fruit that can display this icon the.This is some random description of fruit that can display this icon 
-                             the.This is some random description of fruit that can display this icon the.This is some random description 
-                             of fruit that can display this icon the.This is some random description of fruit that can display this icon the."/>
+                             of fruit that can display this icon the."/>
             </VerticalStackLayout>
         </ScrollView>
         <Border StrokeThickness="0"
                 x:Name="bottomBox"
-                BackgroundColor="DarkSeaGreen"
+                BackgroundColor="#152c39"
                 Margin="-1"
                 VerticalOptions="End"
                 HeightRequest="150"

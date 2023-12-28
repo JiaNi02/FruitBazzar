@@ -5,9 +5,9 @@
              x:Class="FruitBazzar1.Views.CartPage"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              xmlns:viewmodel="clr-namespace:FruitBazzar1.ViewModel"
-             Title="Cart"
+             Title="                   Cart"
              x:DataType="viewmodel:CartViewModel"
-             BackgroundColor="LightGreen">
+             BackgroundColor="#F1F1F1">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Clear Cart"
                      Command="{Binding ClearCartCommand}"/>
@@ -33,7 +33,7 @@
                             </Label>
                             <Button Text="Explore all products"
                                     HorizontalOptions="Center"
-                                    BackgroundColor="ForestGreen"
+                                    BackgroundColor="#152c39"
                                     Clicked="Button_Clicked"/>
 
                         </VerticalStackLayout>
@@ -106,7 +106,7 @@
             
         </ScrollView>
         <Border StrokeShape="RoundRectangle 40"
-                BackgroundColor="ForestGreen"
+                BackgroundColor="#152c39"
                 StrokeThickness="0"
                 VerticalOptions="End"
                 Margin="5"
@@ -129,7 +129,7 @@
 
                 <Button Grid.Column="1"
                         Text="Place Order"
-                        BackgroundColor="YellowGreen"
+                        BackgroundColor="SeaGreen"
                         CornerRadius="22"
                         VerticalOptions="Center"
                         HorizontalOptions="End"

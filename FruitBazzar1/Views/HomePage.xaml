@@ -10,25 +10,27 @@
              x:DataType="viewmodel:HomeViewModel"
              Title="Home"
              Shell.NavBarIsVisible="False"
-             Padding="15">
+             Padding="15"
+             BackgroundColor="#F1F1F1">
 
     
 
     <ScrollView>
         <VerticalStackLayout Spacing="10">
             <StackLayout Orientation="Horizontal">
-                <Label Text="Discover a world of fresh, delicious fruits at your fingertips."
-           HorizontalOptions="Start"
-           FontAttributes="Bold"
-           FontSize="23"
-           HeightRequest="100"
-           WidthRequest="320"
-           LineBreakMode="WordWrap"/>
-
-                <Button BackgroundColor="#152c39"
+                <Label HorizontalOptions="Start" FontAttributes="Bold" FontSize="30" HeightRequest="100" WidthRequest="200">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Daily" />
+                            <Span Text="         "/>
+                            <Span Text="Grocery Fruits" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <!--<Button BackgroundColor="#152c39"
             CornerRadius="45"
-            HeightRequest="32"
-            WidthRequest="32"
+            HeightRequest="30"
+            WidthRequest="30"
             HorizontalOptions="End"
             Clicked="OnButtonClicked">
                     <Button.ImageSource>
@@ -37,13 +39,18 @@
                 Glyph="{x:Static helpers:FontAwesomeHelper.Bell}"
                 Size="18" />
                     </Button.ImageSource>
-                </Button>
+                </Button>-->
             </StackLayout>
             <Border StrokeShape="RoundRectangle 10"
                     StrokeThickness="0"
-                    BackgroundColor="#D3EEE0"
+                    BackgroundColor="White"
                     VerticalOptions="Start"
                     Padding="15">
+                <Border.Shadow>
+                    <Shadow Brush="Black"
+                        Radius="40"
+                        Opacity="0.2"/>
+                </Border.Shadow>
                 <Grid ColumnDefinitions="*, 150"
                       RowDefinitions="*,Auto">
                     <VerticalStackLayout Grid.Row="0"
@@ -58,8 +65,8 @@
                     <Button Grid.Row="1"
                             Grid.Column="0"
                             Text="Get it now"
-                            BackgroundColor="White"
-                            TextColor="Black"
+                            BackgroundColor="#152c39"
+                            TextColor="White"
                             FontAttributes="Bold"
                             CornerRadius="22"
                             HorizontalOptions="Center"
@@ -76,7 +83,7 @@
 
             <Border StrokeShape="RoundRectangle 22"
                     StrokeThickness="2"
-                    Stroke="#D3EEE0">
+                    Stroke="White">
                 <Label Text="Search here..."
                        TextColor="Black"
                        Padding="10,14"/>
@@ -113,9 +120,14 @@
                         <Border FlexLayout.Basis="50%"
                                 StrokeShape="RoundRectangle 10"
                                 StrokeThickness="0"
-                                BackgroundColor="#D3EEE0"
+                                BackgroundColor="White"
                                 Padding="10"
                                 Margin="2">
+                            <Border.Shadow>
+                                <Shadow Brush="Black"
+                        Radius="40"
+                        Opacity="0.2"/>
+                            </Border.Shadow>
                             <Grid RowDefinitions="150, Auto, auto, Auto"
                                   RowSpacing="5">
                                 <Image Grid.Row="0"
@@ -148,8 +160,8 @@
                                 </Grid>
                                 <Button Grid.Row="3"
                                          Text="View More"
-                                         BackgroundColor="White"
-                                         TextColor="Black"
+                                         BackgroundColor="#152c39"
+                                         TextColor="White"
                                          CornerRadius="22"
                                          FontAttributes="Bold"
                                         VerticalOptions="End"

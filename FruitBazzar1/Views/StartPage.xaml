@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FruitBazzar1.Views.StartPage"
+             xmlns:helpers="clr-namespace:FruitBazzar1.Helper"
+             Title="StartPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#F1F1F1">
+    
+    <Grid RowDefinitions="Auto,*,Auto" Padding="20,95">
+        <Image Grid.Row="0"
+           Source="fruitlogo.png"
+           HeightRequest="300"
+           WidthRequest="300"
+           VerticalOptions="Center"
+           HorizontalOptions="Center"/>
+
+        <StackLayout Grid.Row="1" Margin="0,30,0,0">
+            <Label Text="FruitBazzar" FontSize="32" FontAttributes="Bold" 
+                   FontFamily="Lobster-Regular"
+                   HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+            <Label Text="Start your fruity journey with us and enjoy a healthier, tastier life!"
+                   FontSize="19"
+                   HorizontalTextAlignment="Center" 
+                   VerticalOptions="Center" 
+                   HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
+
+        <VerticalStackLayout Grid.Row="2" Spacing="20" VerticalOptions="Center">
+            <Border StrokeShape="RoundRectangle 25"
+                StrokeThickness="0"
+                BackgroundColor="#152c39"
+                HeightRequest="50"
+                WidthRequest="300">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Border.GestureRecognizers>
+                <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
+                    <Label Text="Get Started" VerticalOptions="Center" FontSize="20" TextColor="White"/>
+                    <Image Source="{x:Static helpers:FontAwesomeHelper.MagnifyingGlassArrowRight}" VerticalOptions="Center" HeightRequest="30"/>
+                </HorizontalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </Grid>
+
+</ContentPage>

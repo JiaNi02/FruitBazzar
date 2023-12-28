@@ -9,7 +9,7 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "FruitBazzar.database", "Fru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FruitBazzar1.Api", "FruitBazzar1.Api\FruitBazzar1.Api.csproj", "{D18A3C02-9611-4EFE-937E-63C8A9A7CEE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FruitBazzar1.AdminPanel", "FruitBazzar1.AdminPanel\FruitBazzar1.AdminPanel.csproj", "{8FB9E68C-BE86-49D9-879A-4322E5B137CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FruitBazzar1.AdminPanel", "FruitBazzar1.AdminPanel\FruitBazzar1.AdminPanel.csproj", "{8FB9E68C-BE86-49D9-879A-4322E5B137CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

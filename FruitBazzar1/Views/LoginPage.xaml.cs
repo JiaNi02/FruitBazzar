@@ -20,7 +20,8 @@ public partial class LoginPage : ContentPage
     }
     async void TapGestureRecognizer_Tapped(Object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync(nameof(HomePage), animate: true);
+        //await Shell.Current.GoToAsync(nameof(HomePage), animate: true);
+        await Shell.Current.GoToAsync("//MainTab", animate: true);
     }
     //public LoginPage(LoginPageViewModel viewModel)
     //{

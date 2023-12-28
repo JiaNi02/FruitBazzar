@@ -6,7 +6,7 @@
              Shell.NavBarIsVisible="False"
              BackgroundColor="#fED480">
 
-    <Grid RowDefinitions="Auto,*,Auto" Padding="20,95">
+    <!--<Grid RowDefinitions="Auto,*,Auto" Padding="20,95">
         <Image Grid.Row="0"
            Source="logo.png"
            HeightRequest="300"
@@ -40,6 +40,6 @@
                 </HorizontalStackLayout>
             </Border>
         </VerticalStackLayout>
-    </Grid>
+    </Grid>-->
 
 </ContentPage>
