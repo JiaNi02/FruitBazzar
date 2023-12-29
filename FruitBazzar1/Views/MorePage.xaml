@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FruitBazzar1.Views.MorePage"
+             Title="MorePage">
+    <StackLayout Padding="20" Spacing="20" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+        <Image Source="fruitlogo.png" HeightRequest="200" WidthRequest="200" Aspect="AspectFill" />
+
+        <Label Text="FruitBazzar" FontSize="25" FontAttributes="Bold" TextColor="{DynamicResource PrimaryColor}" HorizontalTextAlignment="Center" />
+
+        <Label Text="Version 1.0" FontSize="18" TextColor="{DynamicResource SecondaryColor}" HorizontalTextAlignment="Center" />
+
+        <Label Text="Description" FontSize="20" FontAttributes="Bold" TextColor="{DynamicResource PrimaryColor}" HorizontalTextAlignment="Center" />
+
+        <Label Text="Explore a variety of delicious fruits with our interactive Fruit App. Learn about their nutritional benefits, recipes, and fun facts. Download now and embark on a fruity adventure!" 
+               FontSize="16" TextColor="{DynamicResource SecondaryColor}" HorizontalTextAlignment="Center" />
+
+        <StackLayout HorizontalOptions="CenterAndExpand" Margin="0,30,0,0">
+            <Label Text="© 2023 Fruit App. All rights reserved." FontSize="14" TextColor="{DynamicResource SecondaryColor}" HorizontalTextAlignment="Center" />
+        </StackLayout>
+
+        <Button
+                Margin="0,30,0,0"
+                Background="#152c39"
+                Text="Return Back"
+                Clicked="Returnback"
+                TextColor="White"/>
+    </StackLayout>
+
+</ContentPage>

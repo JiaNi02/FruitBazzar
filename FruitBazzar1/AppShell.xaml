@@ -37,11 +37,11 @@
                           Route="CategoryPage" />
         </Tab>
 
-        <Tab Title="Chat"
+        <!--<Tab Title="Chat"
              Icon="{FontImage FontFamily=FAS, Glyph={x:Static helper:FontAwesomeHelper.Message}}">
             <ShellContent ContentTemplate="{DataTemplate views:ChatPage}"
                           Route="ChatPage" />
-        </Tab>
+        </Tab>-->
         <Tab Title="Cart"
              Icon="{FontImage FontFamily=FAS, Glyph={x:Static helper:FontAwesomeHelper.CartShopping}}">
             <ShellContent ContentTemplate="{DataTemplate views:CartPage}"
@@ -53,8 +53,19 @@
             <ShellContent ContentTemplate="{DataTemplate views:ProfilePage}"
                           Route="ProfilePage" />
         </Tab>
+        <Tab Title="More"
+             Icon="{FontImage FontFamily=FAS, Glyph={x:Static helper:FontAwesomeHelper.EllipsisVertical}}" Shell.NavBarIsVisible="False" Shell.TabBarIsVisible="False" Shell.TitleColor="white">
+            <ShellContent ContentTemplate="{DataTemplate views:MorePage}"
+                          Route="MorePage" Title="About us" />
+            <ShellContent ContentTemplate="{DataTemplate views:MorePage}"
+                          Route="ProfilePage" Title="Details" />
+            <ShellContent ContentTemplate="{DataTemplate views:NotificationPage}"
+                          Route="NotificationPage" Title="Notification" />
+        </Tab>
+
 
 
     </TabBar>
+
 
 </Shell>
