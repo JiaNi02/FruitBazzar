@@ -1,6 +1,7 @@
 using FruitBazzar1.AdminPanel;
 using FruitBazzar1.AdminPanel.Hubs;
-
+using FruitBazzar1.AdminPanel.Models;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +9,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 // Gerald: Enable SignalR functionality
 builder.Services.AddSignalR();
-
+builder.Services.AddDbContext<FruitBazzardatabaseContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

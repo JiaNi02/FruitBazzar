@@ -113,6 +113,7 @@
 		<PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="7.0.0" />
 		<PackageReference Include="Microsoft.AspNetCore.SignalR.Client.Core" Version="7.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Identity.Client" Version="4.57.0" />
 		<PackageReference Include="Microsoft.Toolkit.Mvvm" Version="7.1.2" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 		<PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
@@ -176,10 +177,6 @@
 	  <MauiXaml Update="Views\StartPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Data\" />
 	</ItemGroup>
 
 </Project>

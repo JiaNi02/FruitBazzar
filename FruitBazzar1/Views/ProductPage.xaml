@@ -62,7 +62,7 @@
                                                FontSize="20"/>
                                         <Grid ColumnDefinitions="*,*">
                                             <Label Grid.Column="0"
-                                                   Text="{Binding Price, StringFormat=RM'{0:N2}'}"
+                                                   Text="{Binding Price, StringFormat='RM{0:N2}(kg/each)'}"
                                                    FontAttributes="Bold"/>
                                             <HorizontalStackLayout Grid.Column="1"
                                                           HorizontalOptions="End"

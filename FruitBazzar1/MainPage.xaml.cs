@@ -1,18 +1,15 @@
 ﻿using FruitBazzar1.Views;
-
+using FruitBazzar1.Data;
+using Microsoft.Identity.Client;
+using System.Diagnostics;
 namespace FruitBazzar1;
 
 public partial class MainPage : ContentPage
 {
-	public MainPage()
-	{
-		InitializeComponent();
-	}
+    //public IPublicClientApplication IdentityClient { get; set; }
+    public MainPage()
+    {
+        InitializeComponent();
 
- //   async void TapGestureRecognizer_Tapped(System.Object sender, Microsoft.Maui.Controls.
-	//TappedEventArgs e)
- //   {
- //       await Shell.Current.GoToAsync(nameof(LoginPage), animate: true);
- //   }
+    }
 }
-

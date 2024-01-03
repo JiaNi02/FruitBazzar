@@ -5,6 +5,8 @@ using FruitBazzar1.Api.Functions.Message;
 using FruitBazzar1.Api.Functions.UserFriend;
 using FruitBazzar1.Api.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Identity.Web;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,10 +18,14 @@ builder.Services.AddSignalR();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
 builder.Services.AddDbContext<FruitBazzardatabaseContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+  .AddMicrosoftIdentityWebApi(builder.Configuration);
+builder.Services.AddAuthorization();
 
 //builder.Services.AddTransient<IUserFunction, UserFunction>();
 //builder.Services.AddTransient<IUserFriendFunction, UserFriendFunction>();
@@ -42,6 +48,10 @@ app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 app.UseRouting();
+
+app.UseAuthentication();
+app.UseAuthorization();
+app.MapControllers();
 
 app.UseMiddleware<JwtMiddleware>();
 
