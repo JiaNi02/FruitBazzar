@@ -85,11 +85,13 @@
 	  <None Remove="Resources\Images\lockicon.png" />
 	  <None Remove="Resources\Images\login.png" />
 	  <None Remove="Resources\Images\logo.png" />
+	  <None Remove="Resources\Images\Mastercard.png" />
 	  <None Remove="Resources\Images\minus.png" />
 	  <None Remove="Resources\Images\notif_image.png" />
 	  <None Remove="Resources\Images\orange.png" />
 	  <None Remove="Resources\Images\p1.jpg" />
 	  <None Remove="Resources\Images\papaya.png" />
+	  <None Remove="Resources\Images\paypal.png" />
 	  <None Remove="Resources\Images\people.png" />
 	  <None Remove="Resources\Images\profile.jpg" />
 	  <None Remove="Resources\Images\rambutan.png" />
@@ -97,7 +99,9 @@
 	  <None Remove="Resources\Images\splash.svg" />
 	  <None Remove="Resources\Images\star.png" />
 	  <None Remove="Resources\Images\thanos.png" />
+	  <None Remove="Resources\Images\tng.png" />
 	  <None Remove="Resources\Images\tony_stark.png" />
+	  <None Remove="Resources\Images\visa.png" />
 	  <None Remove="Resources\Images\wanda.png" />
 	  <None Remove="Resources\Images\watermelon.png" />
 	</ItemGroup>
@@ -130,6 +134,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="PopUpPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\CardMethodPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\CartPage.xaml">

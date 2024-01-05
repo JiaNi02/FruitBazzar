@@ -44,7 +44,7 @@ namespace FruitBazzar1.ViewModel
             //MenuItems.Add(new Model.MenuItems() { Title = "Shipping Address", Body = "profile.png", TargetType = typeof(HomePage) });
             MenuItems.Add(new Model.MenuItems() { Title = "Order History", Body = "\uf64a", TargetType = typeof(HomePage), Icon = "\u203a" });
             MenuItems.Add(new Model.MenuItems() { Title = "Track Order", Body = "\uf041", TargetType = typeof(ProductTrackingPage), Icon = "\u203a" });
-            MenuItems.Add(new Model.MenuItems() { Title = "Cards", Body = "\uf09d", TargetType = typeof(HomePage), Icon = "\u203a" });
+            MenuItems.Add(new Model.MenuItems() { Title = "Cards", Body = "\uf09d", TargetType = typeof(CardMethodPage), Icon = "\u203a" });
             MenuItems.Add(new Model.MenuItems() { Title = "Notifications", Body = "\uf0a2", TargetType = typeof(NotificationPage), Icon = "\u203a" });
         }
 

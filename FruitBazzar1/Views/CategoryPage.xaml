@@ -28,7 +28,7 @@
                     <DataTemplate>
                         <Frame BorderColor="#2196F3" BackgroundColor="White" Padding="10" CornerRadius="10" HasShadow="True">
                             <StackLayout>
-                                <Label Text="{Binding CategoryName}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="#2196F3" FontSize="18" FontAttributes="Bold"/>
+                                <Label Text="{Binding CategoryName}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="#152c39" FontSize="18" FontAttributes="Bold"/>
                             </StackLayout>
                         </Frame>
                     </DataTemplate>

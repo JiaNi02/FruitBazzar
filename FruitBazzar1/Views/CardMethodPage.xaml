@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FruitBazzar1.Views.CardMethodPage"
+             Title="CardMethodPage">
+
+    <StackLayout Margin="10">
+        <!-- Payment Method Selection Section -->
+        <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Spacing="10">
+            <StackLayout Orientation="Horizontal" Spacing="5">
+                <CheckBox />
+                <Label Text="Credit Card" VerticalTextAlignment="Center" />
+                <Image Source="visa.png" WidthRequest="30" HeightRequest="30" />
+                <Image Source="mastercard.png" WidthRequest="30" HeightRequest="30" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Spacing="5">
+                <CheckBox />
+                <Label Text="PayPal" VerticalTextAlignment="Center" />
+                <Image Source="paypal.png" WidthRequest="30" HeightRequest="30" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Spacing="5">
+                <CheckBox />
+                <Label Text="Touch 'n Go" VerticalTextAlignment="Center" />
+                <Image Source="tng.png" WidthRequest="30" HeightRequest="30" />
+            </StackLayout>
+        </StackLayout>
+
+        <!-- Card Details Section -->
+        <ScrollView>
+            <StackLayout Margin="10">
+                <Label Text="Card Details" FontSize="Title" />
+                <Entry Placeholder="Card Number" Text="{Binding CardNumber}" />
+                <StackLayout Orientation="Horizontal">
+                    <Entry Placeholder="Month" Text="{Binding ExpiryMonth}" WidthRequest="70" Keyboard="Numeric" />
+                    <Entry Placeholder="Year" Text="{Binding ExpiryYear}" WidthRequest="70" Keyboard="Numeric" />
+                    <Entry Placeholder="CVV" Text="{Binding CVV}" WidthRequest="70" Keyboard="Numeric" />
+                </StackLayout>
+                <Entry Placeholder="First Name" Text="{Binding FirstName}" />
+                <Entry Placeholder="Last Name" Text="{Binding LastName}" />
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Save Button -->
+        <Button Text="Save" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand" />
+    </StackLayout>
+
+
+
+</ContentPage>
