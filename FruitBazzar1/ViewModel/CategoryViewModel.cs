@@ -8,7 +8,8 @@ namespace FruitBazzar1.ViewModel
 {
     public class CategoryViewModel : BindableObject
     {
-        private ObservableCollection<CategoryItem> _fruitCategories; 
+
+        private ObservableCollection<CategoryItem> _fruitCategories;
 
         public ObservableCollection<CategoryItem> FruitCategories
         {
@@ -23,16 +24,16 @@ namespace FruitBazzar1.ViewModel
             }
         }
 
-        private string _imagePath;
-        public string ImagePath
+        private string _pageTitle;
+        public string PageTitle
         {
-            get { return _imagePath; }
+            get { return _pageTitle; }
             set
             {
-                if ( _imagePath != value)
+                if (_pageTitle != value)
                 {
-                    _imagePath = value;
-                    OnPropertyChanged(nameof(ImagePath));
+                    _pageTitle = value;
+                    OnPropertyChanged();
                 }
             }
         }
@@ -54,6 +55,7 @@ namespace FruitBazzar1.ViewModel
         public CategoryViewModel()
         {
             InitializeCategories();
+            PageTitle = "Fruit Categories";
         }
 
         private void InitializeCategories()
@@ -61,22 +63,26 @@ namespace FruitBazzar1.ViewModel
             // Sample fruit categories, replace with your own data
             FruitCategories = new ObservableCollection<CategoryItem>
             {
-                new CategoryItem { CategoryName = "Citrus Fruits", ImagePath = "apple.jpg" },
-                new CategoryItem { CategoryName = "Berries", ImagePath = "orange.jpg" },
-                new CategoryItem { CategoryName = "Tropical Fruits", ImagePath = "orange.jpg" },
-                new CategoryItem { CategoryName = "Stone Fruits", ImagePath = "orange.jpg" },
-                new CategoryItem { CategoryName = "Melon", ImagePath = "orange.jpg" },
-                new CategoryItem { CategoryName = "Apples and Pears", ImagePath = "orange.jpg" },
-                new CategoryItem { CategoryName = "Exotic Fruits", ImagePath = "orange.jpg" },
-                new CategoryItem { CategoryName = "Stoneless Fruits", ImagePath = "orange.jpg" },
-                // Add more categories with respective image paths
+                    new CategoryItem { CategoryName = "Citrus Fruits"},
+                    new CategoryItem { CategoryName = "Berries",},
+                    new CategoryItem { CategoryName = "Tropical Fruits" },
+                    new CategoryItem { CategoryName = "Stone Fruits" },
+                    new CategoryItem { CategoryName = "Melon" },
+                    new CategoryItem { CategoryName = "Apples and Pears" },
+                    new CategoryItem { CategoryName = "Exotic Fruits" },
+                    new CategoryItem { CategoryName = "Stoneless Fruits" },
+                    // Add more categories with respective image paths
             };
         }
+
+
     }
+
+
 
     public class CategoryItem
     {
         public string CategoryName { get; set; }
-        public string ImagePath { get; set; }
+
     }
 }

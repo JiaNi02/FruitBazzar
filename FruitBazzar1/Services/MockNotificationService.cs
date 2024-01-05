@@ -49,39 +49,39 @@ namespace FruitBazzar1.Services
             },
             new Notifications()
             {
-                Title = "Title",
-                Content = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+                Title = "Berry Exciting News:",
+                Content = "Exciting news! Our new berrylicious smoothie recipe is now available. Check it out in the app and treat yourself to a burst of flavor!",
                 ImageSource = "notif_image.png",
                 NotificationDateTime = DateTime.Now
             },
             new Notifications()
             {
-                Title = "Title",
-                Content = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+                Title = "Apple-a-Day Streak:",
+                Content = "Congratulations! You've kept up with your 'Apple-a-Day' streak for a week. Keep it going for a healthy lifestyle boost!",
                 ImageSource = "notif_image.png",
                 NotificationDateTime = DateTime.Now
             },
             new Notifications()
             {
-                Title = "Title",
-                Content = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+                Title = "Fruity Reminder:",
+                Content = "Don't forget to eat your daily dose of vitamins! Grab a banana or apple for a healthy snack now.",
                 ImageSource = "notif_image.png",
                 NotificationDateTime = DateTime.Now
             },
-            new Notifications()
-            {
-                Title = "Title",
-                Content = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-                ImageSource = "notif_image.png",
-                NotificationDateTime = DateTime.Now
-            },
-            new Notifications()
-            {
-                Title = "Title",
-                Content = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-                ImageSource = "notif_image.png",
-                NotificationDateTime = DateTime.Now
-            }
+            //new Notifications()
+            //{
+            //    Title = "Title",
+            //    Content = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+            //    ImageSource = "notif_image.png",
+            //    NotificationDateTime = DateTime.Now
+            //},
+            //new Notifications()
+            //{
+            //    Title = "Title",
+            //    Content = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+            //    ImageSource = "notif_image.png",
+            //    NotificationDateTime = DateTime.Now
+            //}
         };
             return Task.FromResult(records);
         }

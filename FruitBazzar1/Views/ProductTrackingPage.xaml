@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:FruitBazzar1.ViewModel"
+             x:Class="FruitBazzar1.Views.ProductTrackingPage"
+             x:DataType="viewmodel:ProductTrackingViewModel"
+             Title="ProductTrackingPage">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <!-- Order Tracking Header -->
+            <StackLayout BackgroundColor="#152c39" Padding="10" HorizontalOptions="FillAndExpand">
+                <Label Text="Order Tracking" FontSize="20" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center" />
+            </StackLayout>
+
+            <!-- Order Status -->
+            <Frame Margin="10" Padding="10" BackgroundColor="White" CornerRadius="10" HasShadow="True">
+                <StackLayout>
+                    <Label Text="Order Status" FontSize="18" FontAttributes="Bold" TextColor="#152c39" />
+                    <Label Text="Shipped" FontSize="16" TextColor="#333" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Order Details -->
+            <Frame Margin="10" Padding="10" BackgroundColor="White" CornerRadius="10" HasShadow="True">
+                <StackLayout>
+                    <Label Text="Order Details" FontSize="18" FontAttributes="Bold" TextColor="#152c39" />
+                    <Label Text="Order ID: 123456" FontSize="16" TextColor="#333" />
+                    <Label Text="Date: 2023-01-15" FontSize="16" TextColor="#333" />
+                    <Label Text="Total Amount: $150.00" FontSize="16" TextColor="#333" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Tracking Information -->
+            <Frame Margin="10" Padding="10" BackgroundColor="White" CornerRadius="10" HasShadow="True">
+                <StackLayout>
+                    <Label Text="Tracking Information" FontSize="18" FontAttributes="Bold" TextColor="#152c39" />
+                    <StackLayout Orientation="Horizontal" Spacing="10" VerticalOptions="CenterAndExpand">
+                        <Image Source="point_a.png" HeightRequest="30" WidthRequest="30" />
+                        <Label Text="Shipped on: 2023-01-16" FontSize="16" TextColor="#333" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Spacing="10" VerticalOptions="CenterAndExpand">
+                        <Image Source="point_b.png" HeightRequest="30" WidthRequest="30" />
+                        <Label Text="Carrier: UPS" FontSize="16" TextColor="#333" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Spacing="10" VerticalOptions="CenterAndExpand">
+                        <Image Source="point_c.png" HeightRequest="30" WidthRequest="30" />
+                        <Label Text="Tracking Number: ABC123456" FontSize="16" TextColor="#333" />
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

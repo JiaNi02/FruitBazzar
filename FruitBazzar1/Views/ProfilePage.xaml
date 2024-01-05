@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FruitBazzar1.Views.ProfilePage"
              x:Name="profilePage"
-             Title="ProfilePage">
+             xmlns:helpers="clr-namespace:FruitBazzar1.Helper"
+             Title="Profile">
     <VerticalStackLayout>
         <Grid ColumnDefinitions="*, Auto,*"
                       RowDefinitions="160, Auto">
@@ -56,16 +57,28 @@
                                 StrokeThickness="0">
                             <Border.Background>
                                 <LinearGradientBrush EndPoint="0,1">
-                                    <GradientStop Color="LightGreen"
+                                    <GradientStop Color="SeaGreen"
                                                   Offset="0.1" />
                                     <GradientStop Color="LightGray"
                                                   Offset="1.0" />
                                 </LinearGradientBrush>
                             </Border.Background>
+                            <!--<Button BackgroundColor="#152c39"
+                                    CornerRadius="30"
+                                    HeightRequest="30"
+                                    WidthRequest="30"
+                                    HorizontalOptions="End">
+                                <Button.ImageSource>
+                                    <FontImageSource
+                                        FontFamily="FAS"
+                                        Glyph="{x:Static helpers:FontAwesomeHelper.Bell}"
+                                        Size="18" />
+                                </Button.ImageSource>
+                            </Button>-->
                             <Label FontSize="22"
-                                   FontFamily="icon"
+                                   FontFamily="FAS"                                 
                                    HorizontalOptions="Center"
-                                   VerticalOptions="Center"
+                                   VerticalOptions="Center"                                  
                                    Text="{Binding Body}"
                                    TextColor="Black" />
                         </Border>
@@ -80,13 +93,13 @@
                                TextColor="Black"
                                VerticalOptions="Center" />
 
-                        <Label FontFamily="icon"
+                        <Label FontFamily="FAS"
                                Grid.Column="2"
                                FontSize="16"
                                FontAttributes="Bold"
                                HorizontalOptions="End"
-                               HorizontalTextAlignment="Center"
-                               Text="&#xf142;"
+                               HorizontalTextAlignment="Center"                               
+                               Text="{Binding Icon}"
                                TextColor="Black"
                                VerticalOptions="CenterAndExpand" />
                         <Grid.GestureRecognizers>

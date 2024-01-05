@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FruitBazzar1.ViewModel"
+             x:Class="FruitBazzar1.Views.PaymentPage"
+             x:DataType="local:PaymentViewModel"
+             Title="Payment"
+             BackgroundColor="White">
+
+    <ContentPage.BindingContext>
+        <local:PaymentViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+
+            <!-- Card Type Selection -->
+            <Picker Title="Select Card Type" SelectedIndex="0">
+                <Picker.Items>
+                    <x:String>Visa</x:String>
+                    <x:String>MasterCard</x:String>
+                    <x:String>American Express</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <!-- Card Number Entry -->
+            <Entry Placeholder="Card Number" Keyboard="Numeric" />
+
+            <!-- Expiry Date and CVV -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Entry Grid.Column="0" Placeholder="Expiry Date (MM/YY)" Keyboard="Numeric" />
+                <Entry Grid.Column="1" Placeholder="CVV" Keyboard="Numeric" />
+            </Grid>
+
+            <!-- Cardholder Name Entry -->
+            <Entry Placeholder="Cardholder Name" />
+
+            <!-- Pay Button -->
+            <Button Text="Pay Now" Command="{Binding ProcessPaymentCommand}" />
+
+            <!--<Entry Placeholder="Card Number" Text="{Binding CardNumber}" Keyboard="Numeric" Margin="0,0,0,10"/>
+            <Entry Placeholder="Expiration Date (MM/YY)" Text="{Binding ExpirationDate}" Keyboard="Numeric" Margin="0,0,0,10"/>
+            <Entry Placeholder="CVV" Text="{Binding CVV}" Keyboard="Numeric" Margin="0,0,0,10"/>
+
+            <Button Text="Process Payment" Command="{Binding ProcessPaymentCommand}" BackgroundColor="Green" TextColor="White"/>-->
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

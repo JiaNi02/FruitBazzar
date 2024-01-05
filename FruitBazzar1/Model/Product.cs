@@ -12,6 +12,15 @@ namespace FruitBazzar1.Model
         public string Description { get; set; }
         public string Image { get; set; }
         public double Price { get; set; }
+        public string Category { get; set; }
+
+
+
+        // Override ToString method to provide a meaningful string representation
+        public override string ToString()
+        {
+            return $"{Name} - ${Price}";
+        }
         //public short CategoryId { get; set; }
 
         //public string CategoryName { get; set; }

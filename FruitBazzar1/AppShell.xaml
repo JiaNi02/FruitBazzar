@@ -53,7 +53,17 @@
             <ShellContent ContentTemplate="{DataTemplate views:ProfilePage}"
                           Route="ProfilePage" />
         </Tab>
-        <Tab Title="More"
+        <Tab Title="About us"
+             Icon="{FontImage FontFamily=FAS, Glyph={x:Static helper:FontAwesomeHelper.Folder}}">
+            <ShellContent ContentTemplate="{DataTemplate views:MorePage}"
+                          Route="MorePage}" />
+        </Tab>
+        <Tab Title="Notification"
+             Icon="{FontImage FontFamily=FAS, Glyph={x:Static helper:FontAwesomeHelper.Bell}}">
+            <ShellContent ContentTemplate="{DataTemplate views:NotificationPage}"
+                          Route="NotificationPage" />
+        </Tab>
+        <!--<Tab Title="More"
              Icon="{FontImage FontFamily=FAS, Glyph={x:Static helper:FontAwesomeHelper.EllipsisVertical}}" Shell.NavBarIsVisible="False" Shell.TabBarIsVisible="False" Shell.TitleColor="white">
             <ShellContent ContentTemplate="{DataTemplate views:MorePage}"
                           Route="MorePage" Title="About us" />
@@ -61,7 +71,7 @@
                           Route="ProfilePage" Title="Details" />
             <ShellContent ContentTemplate="{DataTemplate views:NotificationPage}"
                           Route="NotificationPage" Title="Notification" />
-        </Tab>
+        </Tab>-->
 
 
 

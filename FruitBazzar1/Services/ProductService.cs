@@ -10,55 +10,64 @@ namespace FruitBazzar1.Services
             { Id = 1,
               Name= "Apple",
               Image="apple.png",
-              Price= 2
+              Price= 2,
+              Category = "Apples and Pears"
             },
             new Product
             { Id = 2,
               Name= "Orange",
               Image="orange.png",
-              Price= 10
+              Price= 10,
+               Category = "Citrus Fruits"
             },
             new Product
             { Id = 3,
               Name= "Banana",
               Image="banana.png",
-              Price= 3.5
+              Price= 3.5,
+               Category = "Tropical Fruits"
             },
             new Product
             { Id = 4,
               Name= "Papaya",
               Image="papaya.png",
-              Price= 4
+              Price= 4,
+               Category = "Apples and Pears"
             },
             new Product
             { Id = 5,
               Name= "Rambutan",
               Image="rambutan.png",
-              Price= 10
+              Price= 10,
+              Category = "Tropical Fruits"
             },
             new Product
             { Id = 6,
               Name= "Watermelon",
               Image="watermelon.png",
-              Price= 4.5
+              Price= 4.5,
+              Category = "Exotic Fruits"
             },
              new Product
             { Id = 7,
               Name= "Grapefuit",
               Image="grapefuit.png",
-              Price= 10
+              Price= 10,
+               Category = "Exotic Fruits"
             },
                new Product
             { Id = 8,
               Name= "Langsat",
               Image="langsat.png",
-              Price= 10
+              Price= 10,
+              Category = "Tropical Fruits"
             },
                  new Product
             { Id = 9,
               Name= "Kiwi",
               Image="kiwi.png",
-              Price= 3.5
+              Price= 3.5,
+              Category = "Exotic Fruits"
             },
         };
 
@@ -72,5 +81,7 @@ namespace FruitBazzar1.Services
             ? _products
             : _products.Where(p => p.Name.Contains(searchTerm,
                 StringComparison.OrdinalIgnoreCase));
+        public IEnumerable<Product> GetProductsByCategory(string categoryName) =>
+           _products.Where(p => p.Category.Equals(categoryName, StringComparison.OrdinalIgnoreCase));
     }
 }

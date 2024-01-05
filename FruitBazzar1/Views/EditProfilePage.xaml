@@ -4,13 +4,53 @@
              x:Class="FruitBazzar1.Views.EditProfilePage"
              Title="EditProfilePage">
 
+    
     <VerticalStackLayout Spacing="25"
-                         Padding="10,0"
-                         VerticalOptions="Center">
+                         Padding="5,0">
+        <StackLayout BackgroundColor="#152c39" Padding="10" HorizontalOptions="FillAndExpand">
+            <Label Text="Edit Profile" FontSize="20" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center" />
+        </StackLayout>
 
-        <Entry Placeholder="HELLO"
-               HorizontalOptions="Center"/>
+        <Entry Placeholder="Real Name"
+               HorizontalOptions="Center"
+               ClearButtonVisibility="WhileEditing"
+               MaxLength="255"
+               MinimumWidthRequest="500"
+               TextColor="Black"/>
+
+        <Entry Placeholder="Nickname"
+               HorizontalOptions="Center"
+               ClearButtonVisibility="WhileEditing"
+               MaxLength="255"
+               MinimumWidthRequest="500"
+               TextColor="Black"/>
+
+        <Entry Placeholder="Gender"
+               HorizontalOptions="Center"
+               ClearButtonVisibility="WhileEditing"
+               MaxLength="255"
+               MinimumWidthRequest="500"
+               TextColor="Black"/>
+
+        <Entry Placeholder="Email"
+               HorizontalOptions="Center"
+               ClearButtonVisibility="WhileEditing"
+               MaxLength="255"
+               MinimumWidthRequest="500"
+               TextColor="Black"/>
+
+        <Entry Placeholder="Address"
+               HorizontalOptions="Center"
+               ClearButtonVisibility="WhileEditing"
+               MaxLength="255"
+               MinimumWidthRequest="500"
+               TextColor="Black"/>
+
+        <Button Text="Save"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand"
+                Clicked="OnButtonClick"/>
 
     </VerticalStackLayout>
-        
+
 </ContentPage>

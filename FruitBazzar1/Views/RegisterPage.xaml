@@ -3,18 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:helpers="clr-namespace:FruitBazzar1.Helper"
              x:Class="FruitBazzar1.Views.RegisterPage"
-             BackgroundColor="#fED480"
+             BackgroundColor="#F1F1F1"
              Title="              Register">
 
     <Grid>
         <VerticalStackLayout Margin="30" VerticalOptions="Center">
-            <Image Source="logo.png"  HeightRequest="300" WidthRequest="300" HorizontalOptions="Center"/>
+            <Image Source="fruitlogo.png"  HeightRequest="300" WidthRequest="300" HorizontalOptions="Center"/>
 
             <Frame
                 Margin="0,15,0,0"
                 Padding="10,0,10,0"
                 CornerRadius="5"
-                BorderColor="#FF7530">
+                BorderColor="#152c39">
                 <Entry
                     Placeholder="Name"
                     ReturnType="Go"
@@ -24,7 +24,7 @@
                 Margin="0,15,0,0"
                 Padding="10,0,10,0"
                 CornerRadius="5"
-                BorderColor="#FF7530">
+                BorderColor="#152c39">
                 <Entry
                     Placeholder="Mobile Phone"
                     ReturnType="Go"
@@ -34,7 +34,7 @@
                 Margin="0,15,0,0"
                 Padding="10,0,10,0"
                 CornerRadius="5"
-                BorderColor="#FF7530">
+                BorderColor="#152c39">
                 <Entry
                     Placeholder="Email"
                     ReturnType="Go"
@@ -44,7 +44,7 @@
                 Margin="0,15,0,0"
                 Padding="10,0,10,0"
                  CornerRadius="5"
-                BorderColor="#FF7530">
+                BorderColor="#152c39">
                 <Entry
                     IsPassword="True"
                     Placeholder="Password"

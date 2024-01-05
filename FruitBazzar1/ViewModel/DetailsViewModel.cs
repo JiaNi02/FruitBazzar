@@ -8,22 +8,22 @@ using System.Threading.Tasks;
 
 namespace FruitBazzar1.ViewModel
 {
-    [QueryProperty(nameof(Product),nameof(Product))]
+    [QueryProperty(nameof(Product), nameof(Product))]
     public partial class DetailsViewModel : ObservableObject, IDisposable
     {
-        private readonly CartViewModel _cartViewModal;
-        public DetailsViewModel(CartViewModel cartViewModel) 
-        { 
-            _cartViewModal = cartViewModel; 
+        private readonly CartViewModel _cartViewModel;
+        public DetailsViewModel(CartViewModel cartViewModel)
+        {
+            _cartViewModel = cartViewModel;
 
-            _cartViewModal.CartCleared += OnCartCleared;
-            _cartViewModal.CartItemRemoved += OnCartItemRemoved;
-            _cartViewModal.CartItemUpdated += OnCartItemUpdated;
+            _cartViewModel.CartCleared += OnCartCleared;
+            _cartViewModel.CartItemRemoved += OnCartItemRemoved;
+            _cartViewModel.CartItemUpdated += OnCartItemUpdated;
         }
 
         private void OnCartCleared(object? _, EventArgs e) => Product.CartQuantity = 0;
 
-        private void OnCartItemRemoved(object? _, Product p) => 
+        private void OnCartItemRemoved(object? _, Product p) =>
             OnCartItemChanged(p, 0);
 
         private void OnCartItemUpdated(object? _, Product p) =>
@@ -31,7 +31,7 @@ namespace FruitBazzar1.ViewModel
 
         private void OnCartItemChanged(Product p, int quantity)
         {
-            if(p.Name == Product.Name)
+            if (p.Name == Product.Name)
             {
                 Product.CartQuantity = quantity;
             }
@@ -44,7 +44,7 @@ namespace FruitBazzar1.ViewModel
         private void AddToCart()
         {
             Product.CartQuantity++;
-            _cartViewModal.UpdateCartItemCommand.Execute(Product);
+            _cartViewModel.UpdateCartItemCommand.Execute(Product);
         }
 
         [RelayCommand]
@@ -53,7 +53,7 @@ namespace FruitBazzar1.ViewModel
             if (Product.CartQuantity > 0)
             {
                 Product.CartQuantity--;
-                _cartViewModal.UpdateCartItemCommand.Execute(Product);
+                _cartViewModel.UpdateCartItemCommand.Execute(Product);
 
             }
         }
@@ -61,7 +61,7 @@ namespace FruitBazzar1.ViewModel
         [RelayCommand]
         private async Task ViewCart()
         {
-            if(Product.CartQuantity > 0)
+            if (Product.CartQuantity > 0)
             {
                 await Shell.Current.GoToAsync(nameof(CartPage), animate: true);
             }
@@ -75,9 +75,9 @@ namespace FruitBazzar1.ViewModel
 
         public void Dispose()
         {
-            _cartViewModal.CartCleared -= OnCartCleared;
-            _cartViewModal.CartItemRemoved -= OnCartItemRemoved;
-            _cartViewModal.CartItemUpdated -= OnCartItemUpdated;
+            _cartViewModel.CartCleared -= OnCartCleared;
+            _cartViewModel.CartItemRemoved -= OnCartItemRemoved;
+            _cartViewModel.CartItemUpdated -= OnCartItemUpdated;
         }
     }
 }

@@ -5,9 +5,9 @@
              x:Class="FruitBazzar1.Views.CartPage"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              xmlns:viewmodel="clr-namespace:FruitBazzar1.ViewModel"
-             Title="                   Cart"
+             Title="Cart"
              x:DataType="viewmodel:CartViewModel"
-             BackgroundColor="#F1F1F1">
+             BackgroundColor="White">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Clear Cart"
                      Command="{Binding ClearCartCommand}"/>
@@ -33,8 +33,8 @@
                             </Label>
                             <Button Text="Explore all products"
                                     HorizontalOptions="Center"
-                                    BackgroundColor="#152c39"
-                                    Clicked="Button_Clicked"/>
+                                    BackgroundColor="ForestGreen"
+                                    Command="{Binding NavProductPageCommand}"/>
 
                         </VerticalStackLayout>
                     </CollectionView.EmptyView>
@@ -43,7 +43,7 @@
                         <DataTemplate x:DataType="models:Product">
                             <Border StrokeShape="RoundRectangle 15"
                         StrokeThickness="0"
-                        BackgroundColor="White"
+                        BackgroundColor="#D3EEE0"
                         Padding="15">
                                 <Grid ColumnDefinitions="25, Auto, 50, *, 80, 25">
                                     <Label Grid.Column="0"
@@ -79,7 +79,7 @@
                                            FontSize="16"
                                            FontAttributes="Bold"/>
                                     <Image Grid.Column="5"
-                                           Source="delete"
+                                           Source="delete.png"
                                            HeightRequest="20"
                                            WidthRequest="25"
                                            VerticalOptions="Center"
@@ -101,12 +101,12 @@
                     </CollectionView.ItemTemplate>
 
                 </CollectionView>
-                
+
             </VerticalStackLayout>
-            
+
         </ScrollView>
         <Border StrokeShape="RoundRectangle 40"
-                BackgroundColor="#152c39"
+                BackgroundColor="Black"
                 StrokeThickness="0"
                 VerticalOptions="End"
                 Margin="5"
@@ -129,7 +129,8 @@
 
                 <Button Grid.Column="1"
                         Text="Place Order"
-                        BackgroundColor="SeaGreen"
+                        TextColor="Black"
+                        BackgroundColor="#D3EEE0"
                         CornerRadius="22"
                         VerticalOptions="Center"
                         HorizontalOptions="End"

@@ -6,13 +6,16 @@
              BackgroundColor="#F1F1F1">
     <ScrollView>
         <StackLayout>
+            <StackLayout BackgroundColor="#152c39" Padding="10" HorizontalOptions="FillAndExpand">
+                <Label Text="Notification" FontSize="20" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center" />
+            </StackLayout>
             <Label Text=""/>
             <CollectionView x:Name="NotificationCollectionView" ItemsSource="{Binding Notifications}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout Padding="10" >
-                            <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="17" BackgroundColor="White" TextColor="#152c39"/>
-                            <Label Text="{Binding Content}" BackgroundColor="White" TextColor="#152c39"/>
+                            <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="19" BackgroundColor="White" TextColor="#152c39"/>
+                            <Label Text="{Binding Content}" BackgroundColor="White" TextColor="black" FontSize="15"/>
                             <Label Text="{Binding NotificationDateTime}" BackgroundColor="White" TextColor="#152c39"/>
                         </StackLayout>
                     </DataTemplate>

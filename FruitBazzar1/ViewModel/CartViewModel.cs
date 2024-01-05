@@ -40,8 +40,8 @@ namespace FruitBazzar1.ViewModel
             var item = Items.FirstOrDefault(i => i.Name == name);
             if (item is not null)
             {
-               Items.Remove(item);
-               RecalculateTotalAmount();
+                Items.Remove(item);
+                RecalculateTotalAmount();
 
                 CartItemRemoved?.Invoke(this, item);
 
@@ -65,7 +65,7 @@ namespace FruitBazzar1.ViewModel
         [RelayCommand]
         private async Task ClearCart()
         {
-            if(await Shell.Current.DisplayAlert("Confirm Clear Cart?", "Do you really want to clear the cart items?", "Yes", "No"))
+            if (await Shell.Current.DisplayAlert("Confirm Clear Cart?", "Do you really want to clear the cart items?", "Yes", "No"))
             {
                 Items.Clear();
                 RecalculateTotalAmount();
@@ -81,8 +81,16 @@ namespace FruitBazzar1.ViewModel
             Items.Clear();
             CartCleared?.Invoke(this, EventArgs.Empty);
             RecalculateTotalAmount();
-            await Shell.Current.GoToAsync(nameof(CheckoutPage), animate: true);
+            await Shell.Current.GoToAsync(nameof(PaymentPage), animate: true);
             //await Shell.Current.GoToAsync($"//{nameof(CheckoutPage)}");
+        }
+
+        [RelayCommand]
+        public async Task NavProductPage()
+        {
+
+            await Shell.Current.GoToAsync(nameof(ProductPage), animate: true);
+
         }
     }
 }

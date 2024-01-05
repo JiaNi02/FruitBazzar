@@ -8,48 +8,32 @@
              x:Class="FruitBazzar1.Views.CategoryPage"
              x:DataType="viewmodel:CategoryViewModel"
              Title="Categories"
-             BackgroundColor="Wheat">
+             BackgroundColor="#F1F1F1">
 
     <ContentPage.BindingContext>
         <local:CategoryViewModel />
     </ContentPage.BindingContext>
 
+
+
+
     <ScrollView>
         <StackLayout Padding="20">
-
-            <!--List of Categories-->
-            <CollectionView ItemsSource="{Binding FruitCategories}">
+            <CollectionView ItemsSource="{Binding FruitCategories}" SelectionMode="Single"
+                            SelectionChanged="CollectionView_SelectionChanged">
                 <CollectionView.ItemsLayout>
-                    <GridItemsLayout Orientation="Vertical" Span="2" VerticalItemSpacing="10" HorizontalItemSpacing="20" />
+                    <GridItemsLayout Orientation="Vertical" Span="2" VerticalItemSpacing="20" HorizontalItemSpacing="20" />
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Grid ColumnSpacing="10">
-                            <!-- Image with Opacity -->
-                            <Image Source="{Binding ImagePath}" Aspect="AspectFill" HeightRequest="150" Opacity="0.7" />
-
-                            <!-- Label with Category Name -->
-                            <Label Text="{Binding CategoryName}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="White" FontSize="18" FontAttributes="Bold"/>
-                        </Grid>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-
-
-
-            <!--<CollectionView ItemsSource="{Binding FruitCategories}">
-                <CollectionView.ItemsLayout>
-                    <GridItemsLayout Orientation="Horizontal" Span="1"/>
-                </CollectionView.ItemsLayout>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Frame BackgroundColor="Orange" CornerRadius="10" Padding="20" Margin="5">
-                            <Label Text="{Binding}" FontSize="Medium"/>
+                        <Frame BorderColor="#2196F3" BackgroundColor="White" Padding="10" CornerRadius="10" HasShadow="True">
+                            <StackLayout>
+                                <Label Text="{Binding CategoryName}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="#2196F3" FontSize="18" FontAttributes="Bold"/>
+                            </StackLayout>
                         </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
-            </CollectionView>-->
-
+            </CollectionView>
         </StackLayout>
     </ScrollView>
 

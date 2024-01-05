@@ -22,7 +22,9 @@ namespace FruitBazzar1.Api.Controllers
         {
             SqlConnection con = new SqlConnection(_configuration.GetConnectionString("DefaultConnection".ToString()));
             SqlCommand cmd = new SqlCommand("INSERT INTO Registration(UserName, Password, IsActive) VALUES('"+registration.UserName+ "','"+registration.Password+"','"+registration.Email+"', '"+registration.IsActive+"')", con);
+            con.Open();
             int i = cmd.ExecuteNonQuery();
+            con.Close();
             if(i > 0)
             {
                 return "Data inserted";
