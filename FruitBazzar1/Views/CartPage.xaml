@@ -129,7 +129,7 @@
 
                 <Button Grid.Column="1"
                         Text="Place Order"
-                        TextColor="Black"
+                        TextColor="#333"
                         BackgroundColor="#D3EEE0"
                         CornerRadius="22"
                         VerticalOptions="Center"
