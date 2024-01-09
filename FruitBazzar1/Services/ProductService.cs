@@ -32,7 +32,7 @@ namespace FruitBazzar1.Services
               Name= "Papaya",
               Image="papaya.png",
               Price= 4,
-               Category = "Apples and Pears"
+               Category = "Stoneless Fruits"
             },
             new Product
             { Id = 5,
@@ -46,14 +46,14 @@ namespace FruitBazzar1.Services
               Name= "Watermelon",
               Image="watermelon.png",
               Price= 4.5,
-              Category = "Exotic Fruits"
+              Category = "Melon"
             },
              new Product
             { Id = 7,
-              Name= "Grapefuit",
+              Name= "Grape",
               Image="grapefuit.png",
               Price= 10,
-               Category = "Exotic Fruits"
+               Category = "Citrus Fruits"
             },
                new Product
             { Id = 8,

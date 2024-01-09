@@ -15,20 +15,21 @@
     </ContentPage.BindingContext>
 
 
-
-
     <ScrollView>
         <StackLayout Padding="20">
-            <CollectionView ItemsSource="{Binding FruitCategories}" SelectionMode="Single"
-                            SelectionChanged="CollectionView_SelectionChanged">
+            <CollectionView ItemsSource="{Binding FruitCategories}" SelectionMode="Single">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Orientation="Vertical" Span="2" VerticalItemSpacing="20" HorizontalItemSpacing="20" />
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame BorderColor="#2196F3" BackgroundColor="White" Padding="10" CornerRadius="10" HasShadow="True">
+                        <Frame BorderColor="#333" BackgroundColor="#152c39" Padding="10" CornerRadius="10" HasShadow="True">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="ItemTapped" />
+                            </Frame.GestureRecognizers>
+
                             <StackLayout>
-                                <Label Text="{Binding CategoryName}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="#152c39" FontSize="18" FontAttributes="Bold"/>
+                                <Label Text="{Binding CategoryName}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="#fff" FontSize="18" FontAttributes="Bold"/>
                             </StackLayout>
                         </Frame>
                     </DataTemplate>

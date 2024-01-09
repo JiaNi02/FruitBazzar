@@ -68,12 +68,12 @@
                                              VerticalOptions="Center"
                                              Spacing="2">
                                         <Label Text="{Binding Name}"/>
-                                        <Label Text="{Binding Price, StringFormat='${0:N2}'}"
+                                        <Label Text="{Binding Price, StringFormat='RM{0:N2}'}"
                                                FontSize="14"/>
                                     </VerticalStackLayout>
 
                                     <Label Grid.Column="4"
-                                           Text="{Binding Amount, StringFormat='${0:N2}'}"
+                                           Text="{Binding Amount, StringFormat='RM{0:N2}'}"
                                            VerticalOptions="Center"
                                            HorizontalOptions="Center"
                                            FontSize="16"
@@ -120,7 +120,7 @@
                         <FormattedString>
                             <Span Text="Total: &#10;"
                                   FontSize="18"/>
-                            <Span Text="{Binding TotalAmount, StringFormat='${0:N2}'}"
+                            <Span Text="{Binding TotalAmount, StringFormat='RM{0:N2}'}"
                                   FontSize="20"
                                   FontAttributes="Bold"/>
                         </FormattedString>

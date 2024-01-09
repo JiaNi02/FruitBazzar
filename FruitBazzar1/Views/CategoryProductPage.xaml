@@ -7,8 +7,12 @@
              xmlns:models="clr-namespace:FruitBazzar1.Model"
              x:Class="FruitBazzar1.Views.CategoryProductPage"
              x:DataType="viewmodel:CategoryProductViewModel"
-             Title="CategoryProduct">
+             >
 
+    <ContentPage.Title>
+        <Binding Path="Title" />
+    </ContentPage.Title>
+    
     <ContentPage.BindingContext>
         <local:CategoryProductViewModel />
     </ContentPage.BindingContext>
@@ -16,15 +20,30 @@
     <ContentPage.Content>
         <CollectionView ItemsSource="{Binding CategoryProducts}">
             <CollectionView.ItemsLayout>
-                <GridItemsLayout Orientation="Vertical" Span="2" VerticalItemSpacing="10" HorizontalItemSpacing="10" />
+                <GridItemsLayout Orientation="Vertical" Span="2" VerticalItemSpacing="10" HorizontalItemSpacing="10"/>
             </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Frame BorderColor="#2196F3" BackgroundColor="White" Padding="10" CornerRadius="10" HasShadow="True">
+                    <Frame BorderColor="#333" BackgroundColor="White" Padding="20" CornerRadius="10" HasShadow="True" Margin="15,20,15,10">
+                        
                         <StackLayout>
                             <Image Source="{Binding Image}" Aspect="AspectFill" HeightRequest="100" />
-                            <Label Text="{Binding Name}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="#2196F3" FontSize="18" FontAttributes="Bold"/>
-                            <Label Text="{Binding Price, StringFormat='Price: {0:C}'}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="#2196F3" FontSize="16" />
+                            <Label Text="{Binding Name}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="#333" FontSize="18" FontAttributes="Bold"/>
+                            <Label Text="{Binding Price, StringFormat='RM{0:N2}'}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="#333" FontSize="16" Margin="0,5,0,0"/>
+
+                            <!-- Button to view details -->
+                            <Button Text="View More" 
+                                    Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewmodel:CategoryProductViewModel}},
+                                    Path=ViewMoreCommand}"
+                                    CommandParameter="{Binding .}" 
+                                    BackgroundColor="#152c39"
+                                    TextColor="White"
+                                    CornerRadius="22"
+                                    FontAttributes="Bold"
+                                    HorizontalOptions="CenterAndExpand" 
+                                    VerticalOptions="CenterAndExpand" 
+                                    Padding="10,0,10,0" 
+                                    Margin="0,5,0,0"/>
                         </StackLayout>
                     </Frame>
                 </DataTemplate>

@@ -61,13 +61,14 @@ public static class MauiProgram
         services.AddTransientWithShellRoute<ProfilePage, ProfileViewModel>(nameof(ProfilePage));
         services.AddTransientWithShellRoute<LoginPage, LoginViewModel>(nameof(LoginPage));
         services.AddTransientWithShellRoute<RegisterPage, RegisterViewModel>(nameof(RegisterPage));
+        services.AddTransientWithShellRoute<CategoryPage, CategoryViewModel>(nameof(CategoryPage));
         services.AddTransientWithShellRoute<CategoryProductPage, CategoryProductViewModel>(nameof(CategoryProductPage));
 
         services.AddSingleton<CartViewModel>();
         services.AddTransient<CartPage>();
 
-        services.AddSingleton<CartViewModel>()
-                .AddSingleton<CartPage>();
+        services.AddSingleton<CategoryViewModel>()
+                .AddTransient<CategoryPage>();
         return services;
 	}
 }

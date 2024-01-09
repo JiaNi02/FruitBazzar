@@ -1,21 +1,21 @@
 namespace FruitBazzar1.Views
 {
     public partial class CategoryPage : ContentPage
-{
-
-    public CategoryPage()
     {
-        InitializeComponent();
 
-
-    }
-
-    private async void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-    {
-        if (e.CurrentSelection?[0] is CategoryItem category)
+        public CategoryPage()
         {
-            await Navigation.PushAsync(new CategoryProductPage(category.CategoryName));
+            InitializeComponent();
+
+
+        }
+
+        private async void ItemTapped(object sender, EventArgs e)
+        {
+            if (sender is Frame frame && frame.BindingContext is CategoryItem category)
+            {
+                await Navigation.PushAsync(new CategoryProductPage(category.CategoryName));
+            }
         }
     }
-}
 }

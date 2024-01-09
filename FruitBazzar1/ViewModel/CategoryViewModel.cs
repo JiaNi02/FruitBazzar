@@ -79,7 +79,6 @@ namespace FruitBazzar1.ViewModel
     }
 
 
-
     public class CategoryItem
     {
         public string CategoryName { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FruitBazzar1.ViewModel
 {
-    public class CategoryProductViewModel : BindableObject
+    public partial class CategoryProductViewModel : ObservableObject
     {
         private ObservableCollection<Product> _categoryProducts;
 
@@ -69,6 +69,15 @@ namespace FruitBazzar1.ViewModel
         }
 
 
+        private string _title;
+
+        public string Title
+        {
+            get => _title;
+            set => SetProperty(ref _title, value);
+        }
+
+
         // Default constructor
         public CategoryProductViewModel()
         {
@@ -95,6 +104,24 @@ namespace FruitBazzar1.ViewModel
 
 
             }));
+
+
+            // Set the title to the selected category
+            Title = categoryName;
+        }
+
+        [RelayCommand]
+        private async Task ViewMore(Product product)
+        {
+            var parameters = new Dictionary<string, object>
+            {
+                [nameof(DetailsViewModel.Product)] = product,
+                [nameof(CategoryProductViewModel.Title)] = Title
+            };
+
+            
+
+            await Shell.Current.GoToAsync("//MainTab/D_FAULT_Tab32/DetailsPage", animate: true, parameters);
         }
     }
 }
