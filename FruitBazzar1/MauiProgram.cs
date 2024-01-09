@@ -27,6 +27,7 @@ public static class MauiProgram
 			})
 			.UseMauiCommunityToolkit();
 
+		
         builder.Services.AddSingleton<ChatHub>();
         builder.Services.AddSingleton<AppShell>();
         builder.Services.AddSingleton<ListChatPage>();
@@ -38,7 +39,8 @@ public static class MauiProgram
 #if DEBUG
         builder.Logging.AddDebug();
 #endif
-		AddProductServices(builder.Services);
+        //builder.Services.AddHttpClient("api", httpClient => httpClient.BaseAddress = new Url("https://localhost:44350/swagger/index.html");
+        AddProductServices(builder.Services);
 		return builder.Build();
 	}
 	private static IServiceCollection

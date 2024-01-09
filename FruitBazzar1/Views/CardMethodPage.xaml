@@ -3,39 +3,43 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FruitBazzar1.Views.CardMethodPage"
              Title="CardMethodPage">
+    
 
-    <StackLayout Margin="10">
+    <StackLayout >
+        <StackLayout BackgroundColor="#152c39" Padding="10" HorizontalOptions="FillAndExpand">
+            <Label Text="Payment Method" FontSize="20" FontAttributes="Bold" TextColor="White" HorizontalOptions="Start" />
+        </StackLayout>
         <!-- Payment Method Selection Section -->
-        <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Spacing="10">
+        <StackLayout Orientation="Vertical" Spacing="10" Margin="10">
             <StackLayout Orientation="Horizontal" Spacing="5">
-                <CheckBox />
-                <Label Text="Credit Card" VerticalTextAlignment="Center" />
-                <Image Source="visa.png" WidthRequest="30" HeightRequest="30" />
-                <Image Source="mastercard.png" WidthRequest="30" HeightRequest="30" />
+                <CheckBox Color="#152c39"/>
+                <Label Text="Credit Card" VerticalTextAlignment="Center" FontSize="20" FontAttributes="Bold" FontFamily="arial"/>
+                <Image Source="visa.png" WidthRequest="55" HeightRequest="55" />
+                <Image Source="mastercard.png" WidthRequest="45" HeightRequest="45" />
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" Spacing="5">
-                <CheckBox />
-                <Label Text="PayPal" VerticalTextAlignment="Center" />
-                <Image Source="paypal.png" WidthRequest="30" HeightRequest="30" />
+                <CheckBox Color="#152c39"/>
+                <Label Text="PayPal" VerticalTextAlignment="Center" FontSize="20" FontAttributes="Bold" FontFamily="arial"/>
+                <Image Source="paypal.png" WidthRequest="65" HeightRequest="65" />
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Spacing="5">
-                <CheckBox />
-                <Label Text="Touch 'n Go" VerticalTextAlignment="Center" />
-                <Image Source="tng.png" WidthRequest="30" HeightRequest="30" />
+                <CheckBox Color="#152c39"/>
+                <Label Text="Touch 'n Go" VerticalTextAlignment="Center" FontSize="20" FontAttributes="Bold" FontFamily="arial"/>
+                <Image Source="tng.png" WidthRequest="35" HeightRequest="35" />
             </StackLayout>
         </StackLayout>
 
         <!-- Card Details Section -->
-        <ScrollView>
-            <StackLayout Margin="10">
-                <Label Text="Card Details" FontSize="Title" />
+        <ScrollView Margin="10">
+            <StackLayout Margin="10,40" Spacing="10">
+                <Label Text="Card Details" FontSize="Medium" FontFamily="arial" FontAttributes="Bold"/>
                 <Entry Placeholder="Card Number" Text="{Binding CardNumber}" />
-                <StackLayout Orientation="Horizontal">
-                    <Entry Placeholder="Month" Text="{Binding ExpiryMonth}" WidthRequest="70" Keyboard="Numeric" />
-                    <Entry Placeholder="Year" Text="{Binding ExpiryYear}" WidthRequest="70" Keyboard="Numeric" />
-                    <Entry Placeholder="CVV" Text="{Binding CVV}" WidthRequest="70" Keyboard="Numeric" />
+                <StackLayout Orientation="Horizontal" Padding="0,0,20,0">
+                    <Entry Placeholder="MM" Text="{Binding ExpiryMonth}" WidthRequest="80" Keyboard="Numeric" />
+                    <Entry Placeholder="Year" Text="{Binding ExpiryYear}" WidthRequest="80" Keyboard="Numeric" />
+                    <Entry Placeholder="CVV" Text="{Binding CVV}" WidthRequest="100" Keyboard="Numeric" />
                 </StackLayout>
                 <Entry Placeholder="First Name" Text="{Binding FirstName}" />
                 <Entry Placeholder="Last Name" Text="{Binding LastName}" />
@@ -43,7 +47,7 @@
         </ScrollView>
 
         <!-- Save Button -->
-        <Button Text="Save" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand" />
+        <Button Text="Save" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand" BackgroundColor="#152c39" Margin="20,30"/>
     </StackLayout>
 
 
