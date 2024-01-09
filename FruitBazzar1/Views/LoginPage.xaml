@@ -21,9 +21,10 @@
                 CornerRadius="15"
                 BorderColor="#152c39">
                 <Entry
-                    Placeholder="User name"
+                    Placeholder="Email"
                     ReturnType="Go"
-                    TextColor="Black" />
+                    TextColor="Black"
+                    x:Name="Entry_Email"/>
             </Frame>
 
             <Frame
@@ -35,7 +36,8 @@
                     IsPassword="True"
                     Placeholder="Password"
                     ReturnType="Go"
-                    TextColor="Black" />
+                    TextColor="Black"
+                     x:Name="Entry_Password"/>
             </Frame>
 
             <Button
@@ -43,7 +45,8 @@
                 Background="#152c39"
                 Text="Login"
                 Clicked="TapGestureRecognizer_Tapped"
-                TextColor="White"/>
+                TextColor="White"
+                 x:Name="Login_btn"/>
 
             <HorizontalStackLayout Margin="0,30,0,0" HorizontalOptions="Center">
                 <Line

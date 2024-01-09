@@ -1,12 +1,10 @@
 using FruitBazzar1.Api;
-using FruitBazzar1.Api.Controllers.ChatHub;
 using FruitBazzar1.Api.Entities;
-using FruitBazzar1.Api.Functions.Message;
-using FruitBazzar1.Api.Functions.UserFriend;
 using FruitBazzar1.Api.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Identity.Web;
+using FruitBazzar1.Api.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,42 +16,43 @@ builder.Services.AddSignalR();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
-builder.Services.AddDbContext<FruitBazzardatabaseContext>(options =>
+builder.Services.AddDbContext<FruitBazzarApidbcontext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection") ??
+        throw new InvalidOperationException("Connection string 'Default Connection' not found"));
 });
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-  .AddMicrosoftIdentityWebApi(builder.Configuration);
+//builder.Services.AddDbContext<FruitBazzardatabaseContext>(options =>
+//{
+//    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+//});
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddMicrosoftIdentityWebApi(builder.Configuration);
 builder.Services.AddAuthorization();
 
-//builder.Services.AddTransient<IUserFunction, UserFunction>();
-//builder.Services.AddTransient<IUserFriendFunction, UserFriendFunction>();
-//builder.Services.AddTransient<IMessageFunction, MessageFunction>();
-//builder.Services.AddScoped<UserOperator>();
-//builder.Services.AddScoped<ChatHub>();
+
 
 //builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-//if (app.Environment.IsDevelopment())
-//{
-//    app.UseSwagger();
-//    app.UseSwaggerUI();
-//}
-app.UseSwagger();
-app.UseSwaggerUI();
-
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+//app.UseSwagger();
+//app.UseSwaggerUI();
+#if DEBUG
 app.UseHttpsRedirection();
+#endif
+
 app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 
-app.UseMiddleware<JwtMiddleware>();
+//app.UseMiddleware<JwtMiddleware>();
 
 //app.UseAuthorization();
 
