@@ -119,7 +119,8 @@ namespace FruitBazzar1.ViewModel
                 [nameof(CategoryProductViewModel.Title)] = Title
             };
 
-            await Shell.Current.GoToAsync(nameof(DetailsPage), animate: true, parameters);
+            //await Shell.Current.GoToAsync(nameof(DetailsPage), animate: true, parameters);
+            await Shell.Current.GoToAsync("//MainTab/D_FAULT_Tab32/DetailsPage", animate: true, parameters);
         }
     }
 }
