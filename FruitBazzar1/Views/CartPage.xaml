@@ -5,9 +5,9 @@
              x:Class="FruitBazzar1.Views.CartPage"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              xmlns:viewmodel="clr-namespace:FruitBazzar1.ViewModel"
-             Title="Cart"
+             Title="                    Cart"
              x:DataType="viewmodel:CartViewModel"
-             BackgroundColor="White">
+             BackgroundColor="#F1F1F1">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Clear Cart"
                      Command="{Binding ClearCartCommand}"/>

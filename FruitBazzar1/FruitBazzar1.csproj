@@ -71,6 +71,7 @@
 	  <None Remove="Resources\Images\back.png" />
 	  <None Remove="Resources\Images\banana.png" />
 	  <None Remove="Resources\Images\berries.jpg" />
+	  <None Remove="Resources\Images\blueberry.png" />
 	  <None Remove="Resources\Images\check.png" />
 	  <None Remove="Resources\Images\delete.png" />
 	  <None Remove="Resources\Images\durian.png" />
@@ -85,6 +86,7 @@
 	  <None Remove="Resources\Images\lockicon.png" />
 	  <None Remove="Resources\Images\login.png" />
 	  <None Remove="Resources\Images\logo.png" />
+	  <None Remove="Resources\Images\logout.png" />
 	  <None Remove="Resources\Images\Mastercard.png" />
 	  <None Remove="Resources\Images\minus.png" />
 	  <None Remove="Resources\Images\notif_image.png" />
@@ -93,11 +95,13 @@
 	  <None Remove="Resources\Images\papaya.png" />
 	  <None Remove="Resources\Images\paypal.png" />
 	  <None Remove="Resources\Images\people.png" />
+	  <None Remove="Resources\Images\plums.png" />
 	  <None Remove="Resources\Images\profile.jpg" />
 	  <None Remove="Resources\Images\rambutan.png" />
 	  <None Remove="Resources\Images\rightarrow.png" />
 	  <None Remove="Resources\Images\splash.svg" />
 	  <None Remove="Resources\Images\star.png" />
+	  <None Remove="Resources\Images\strawberry.png" />
 	  <None Remove="Resources\Images\thanos.png" />
 	  <None Remove="Resources\Images\tng.png" />
 	  <None Remove="Resources\Images\tony_stark.png" />
@@ -130,6 +134,9 @@
 	  </Compile>
 	  <Compile Update="Views\ListChatPage.xaml.cs">
 	    <DependentUpon>ListChatPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\LogoutPage.xaml.cs">
+	    <DependentUpon>LogoutPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
@@ -168,6 +175,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\LogoutPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\MorePage.xaml">

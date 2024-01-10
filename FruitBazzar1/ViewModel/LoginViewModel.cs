@@ -120,30 +120,7 @@ namespace FruitBazzar1.ViewModel
     //        }
     //    }
 
-    //    private string userName;
-    //    private string password;
-    //    private bool isProcessing;
 
-    //    public string UserName
-    //    {
-    //        get { return userName; }
-    //        set { userName = value; OnPropertyChanged(); }
-    //    }
-
-    //    public string Password
-    //    {
-    //        get { return password; }
-    //        set { password = value; OnPropertyChanged(); }
-    //    }
-
-    //    public bool IsProcessing
-    //    {
-    //        get { return isProcessing; }
-    //        set { isProcessing = value; OnPropertyChanged(); }
-    //    }
-
-    //    public ICommand LoginCommand { get; set; }
-    //}
 }
 
 
