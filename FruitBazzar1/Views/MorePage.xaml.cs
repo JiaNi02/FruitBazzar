@@ -6,8 +6,8 @@ public partial class MorePage : ContentPage
 	{
 		InitializeComponent();
 	}
-    private async void Returnback(object sender, EventArgs e)
+     async void Returnback(object sender, EventArgs e)
     {
-        await Navigation.PopAsync();
+        await Shell.Current.GoToAsync("//HomePage", animate: true);
     }
 }

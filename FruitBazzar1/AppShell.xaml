@@ -58,10 +58,10 @@
             <ShellContent ContentTemplate="{DataTemplate views:MorePage}"
                           Route="MorePage}" />
         </Tab>
-        <Tab Title="Notification"
-             Icon="{FontImage FontFamily=FAS, Glyph={x:Static helper:FontAwesomeHelper.Bell}}">
-            <ShellContent ContentTemplate="{DataTemplate views:NotificationPage}"
-                          Route="NotificationPage" />
+        <Tab Title="Logout"
+             Icon="{FontImage FontFamily=FAS, Glyph={x:Static helper:FontAwesomeHelper.RightFromBracket}}">
+            <ShellContent ContentTemplate="{DataTemplate views:LogoutPage}"
+                          Route="Logout" />
         </Tab>
         <!--<Tab Title="More"
              Icon="{FontImage FontFamily=FAS, Glyph={x:Static helper:FontAwesomeHelper.EllipsisVertical}}" Shell.NavBarIsVisible="False" Shell.TabBarIsVisible="False" Shell.TitleColor="white">

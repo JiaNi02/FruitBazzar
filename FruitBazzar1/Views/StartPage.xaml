@@ -15,7 +15,7 @@
            VerticalOptions="Center"
            HorizontalOptions="Center"/>
 
-        <StackLayout Grid.Row="1" Margin="0,30,0,0">
+        <StackLayout Grid.Row="1" Margin="0,30,0,60">
             <Label Text="FruitBazzar" FontSize="32" FontAttributes="Bold" 
                    FontFamily="Lobster-Regular"
                    HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>

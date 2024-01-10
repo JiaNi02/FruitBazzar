@@ -55,19 +55,40 @@ namespace FruitBazzar1.Services
               Price= 10,
                Category = "Citrus Fruits"
             },
-               new Product
+              new Product
             { Id = 8,
               Name= "Langsat",
               Image="langsat.png",
               Price= 10,
               Category = "Tropical Fruits"
             },
-                 new Product
+              new Product
             { Id = 9,
               Name= "Kiwi",
               Image="kiwi.png",
               Price= 3.5,
               Category = "Exotic Fruits"
+            },
+             new Product
+            { Id = 10,
+              Name= "Plums",
+              Image="plums.png",
+              Price= 20,
+              Category = "Stone Fruits"
+            },
+             new Product
+            { Id = 11,
+              Name= "Strawberry",
+              Image="strawberry.png",
+              Price= 18,
+              Category = "Berries"
+            },
+             new Product
+            { Id = 12,
+              Name= "Blueberry",
+              Image="blueberry.png",
+              Price= 14,
+              Category = "Berries"
             },
         };
 
